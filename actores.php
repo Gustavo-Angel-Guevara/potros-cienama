@@ -3,20 +3,38 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/estiloActores.css">
+	<style>
+		a{
+			color: black;
+		}
+	</style>
 </head>
 <body>
 	<div class="miniespacio">
 		<br><br><br><br>
 	</div>
 	<div class="container">
-		<h2 class="letraBlanca">
-			Lista de directores
+		<h2 class="letraNegra">
+			<center>
+			<div class="cuadrado">Lista de Actores</div>
+           <style> .cuadrado{
+           padding:5px;
+           margin:5px;
+           background-color: #a62424;
+           box-shadow: 0px 0px 60px red;
+           color: white; }
+            </style>
 			<br>
-			<a href="index.php" class="btn btn-info">Volver</a>
+			<br>
+			<a href="index.php" class="btn btn-info">Volver</a> 
 			<a href="" class="btn btn-success">+Agregar</a>
 			<a href="" class="btn btn-secondary">Generar reporte</a>
 			<a href="" class="btn btn-warning">Respaldo general</a>
+			<br>
+			<br>
+			</center>
 		</h2>
 		
 		<?PHP 
@@ -35,15 +53,15 @@
 				mkdir($dir);
 		?>
 			
-		<table>
+		<table class="table table-dark ">
 		  <thead>
 		    <tr>
-		      <th>#</th>
-		      <th>Nombre actor</th>
-		      <th>Nacionalidad</th>
-		      <th>Editar</th>
-			  <th>Borrado lógico</th>
-			  <th>Borrado físico</th>
+		      <th scope="col">#</th>
+		      <th scope="col">Nombre actor</th>
+		      <th scope="col">Nacionalidad</th>
+		      <th scope="col">Editar</th>
+			  <th scope="col">Borrado lógico</th>
+			  <th scope="col">Borrado físico</th>
 		    </tr>
 		  </thead>
 		  <tbody>

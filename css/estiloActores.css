@@ -1,0 +1,16 @@
+body{
+	background-image: url("fondo_actores.jpg");
+}
+
+.centrado{
+	padding: 10% 20% 10% 20%;
+}
+
+.letraBlanca{
+	color: white;
+}
+
+
+.fondoClaro{
+	color: white;
+}
