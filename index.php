@@ -25,7 +25,7 @@
 				</a>
 			</div>
 			<div class="col-lg-4">
-				<a class="btn btn-primary" href="">
+				<a class="btn btn-primary" href="directores.php">
 					Directores
 				</a>
 			</div>

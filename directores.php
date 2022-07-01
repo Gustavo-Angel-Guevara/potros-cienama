@@ -3,7 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/estiloDirectores.css">
+	<style>
+		a{
+			color: white;
+		}
+	</style>
 </head>
 <body>
 	<div class="miniespacio">
@@ -12,11 +19,11 @@
 	<div class="container">
 		<h2 class="letraBlanca">
 			Lista de directores
-			<br>
-			<a href="index.php" class="btn btn-info">Volver</a>
-			<a href="nuevaPelicula.php" class="btn btn-success">+Agregar</a>
-			<a href="reportePeliculas.php" class="btn btn-secondary">Generar reporte</a>
-			<a href="respaldoGeneral.php" class="btn btn-warning">Respaldo general</a>
+			<br></br>
+			<a href="index.php" class="btn btn--1">Volver</a>
+			<a href="nuevaPelicula.php" class="btn btn--2">+Agregar</a>
+			<a href="reportePeliculas.php" class="btn btn--3">Generar reporte</a>
+			<a href="respaldoGeneral.php" class="btn btn--4">Respaldo general</a>
 		</h2>
 		
 		<?PHP 
@@ -35,16 +42,16 @@
 				mkdir($dir);
 		?>
 			
-		<table class="table table-dark table-striped table-hover">
+		<table class="table table-light table-striped table-hover">
 		  <thead>
 		    <tr>
-		      <th scope="col">#</th>
-		      <th scope="col">Nombre director</th>
-		      <th scope="col">Nacionalidad</th>
-		      <th scope="col">Fecha de nacimineto</th>
-		      <th scope="col">Editar</th>
-			  <th scope="col">Borrado lógico</th>
-			  <th scope="col">Borrado físico</th>
+		      <th class="bg-primary text-white" scope="col">#</th>
+		      <th class="bg-secondary text-white" scope="col">Nombre director</th>
+		      <th class="bg-success text-white" scope="col">Nacionalidad</th>
+		      <th class="bg-danger text-white" scope="col">Fecha de nacimineto</th>
+		      <th class="bg-warning text-white" scope="col">Editar</th>
+			  <th class="bg-info text-white" scope="col">Borrado lógico</th>
+			  <th class="bg-dark text-white" scope="col">Borrado físico</th>
 		    </tr>
 		  </thead>
 		  <tbody>
