@@ -7,6 +7,7 @@
 	$color = $_POST["color"];
 	$clasi = $_POST["clasificacion"];
 	$sin = $_POST["sinopsis"];
+	$band = $_POST["band"];
 	/*echo "La pelicula se llama ".$nombreP."<br>";
 	echo "La fecha es ".$fecha."<br>";
 	echo "Nacionalidad: ".$nac."<br>Idioma: ".$idioma."<br>";
@@ -18,6 +19,30 @@
 	VALUES (null,'$nombreP', $fecha, '$nac', '$idioma', '$color', '$clasi', '$sin', 1)";
 	$ejecutar = mysqli_query($conexion,$consulta);
 
-	echo "Registro correcto <br>";
-	echo "<a href='peliculas.php'>Volver</a>"	 
+	if($band == "0"){
+		echo "Registro correcto <br>";
+		echo "<a href='peliculas.php'>Volver</a>";
+	}else{
+		//-----------------------------------------------------
+		error_reporting(0);
+
+		//--------------------Respuesta Enviada a la petición FETCH del js/validaciones.js
+		if($ejecutar){
+			$res = [
+				"err" => false,
+				"message" => "Registro guardado con Éxito"
+			];
+		}else{
+			$res = [
+				"err" => true,
+				"message" => "Error al guardar los datos intente más tarde"
+			];
+		} 
+
+		echo json_encode($res);
+		//-----------------------------------------------------
+	}
+
+
+ 
 ?>

@@ -33,6 +33,7 @@
 		    $pdf->SetXY(20,40);
 		    $pdf->Cell(170,20,'Nombre pelicula: ',0,1,'C');
 
+			$rutaImagenWampp = 'C:wamp64/www/CINE_06_03/temp/pelicula_'.$row['idPelicula'].'.png';
 		    $rutaImagen = 'C:/xampp/htdocs/cine/temp/pelicula_'.$row['idPelicula'].'.png';
 		    $pdf->Image($rutaImagen,75,60,60,60);
 

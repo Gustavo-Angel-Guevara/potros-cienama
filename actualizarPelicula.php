@@ -8,7 +8,7 @@
 	$color = $_POST['color'];
 	$clasificacion = $_POST['clasificacion'];
 	$sinopsis = $_POST['sinopsis'];
-
+	$band = $_POST["band"];
 	//Servidor, usuario, contraseña, BD
 	$conexion = new mysqli("localhost","root","", "peliculas");
 	$consulta = "UPDATE pelicula SET 
@@ -26,7 +26,27 @@
 
 	$conexion->query($consulta);
 
-	echo "Datos actualizados";
-	echo "<a href='peliculas.php'>Volver</a>"
+	if($band == "0"){
+		echo "Datos actualizados";
+		echo "<a href='peliculas.php'>Volver</a>";
+	}else{
+		//-----------------------------------------------------
+		error_reporting(0);
 
+		//--------------------Respuesta Enviada a la petición FETCH del js/validaciones.js
+		if($conexion->query($consulta)){
+			$res = [
+				"err" => false,
+				"message" => "Registro Actualizado con Éxito"
+			];
+		}else{
+			$res = [
+				"err" => true,
+				"message" => "Error al Actualizar los datos intente más tarde"
+			];
+		} 
+
+		echo json_encode($res);
+		//-----------------------------------------------------
+	}
 ?>
