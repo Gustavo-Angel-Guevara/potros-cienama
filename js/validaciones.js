@@ -312,9 +312,9 @@ const manejarSubmit = ($alertStatus, e, url)=>{
         let Redirigiendo = null;
 
         //Seleccionar el tipo de alerta Error o Exitoso
-        if(json.err){$alertStatus.classList.add('alert', 'alert-danger')
+        if(json.err){$alertStatus.classList.replace('alert-success', 'alert-danger')
         }else if(!json.err){    
-            $alertStatus.classList.add('alert', 'alert-success'); e.target.reset()
+            $alertStatus.classList.replace('alert-danger', 'alert-success'); e.target.reset()
             $alertStatus.textContent += '. Redirigiendo'
             let count = 0;
             Redirigiendo = setInterval(()=>{                       
@@ -378,7 +378,7 @@ export default function(){
 
     //Alerta de Confirmación de registro y actualización
     const $alertStatus = document.createElement('div');
-    $alertStatus.classList.add('alert' ,'mt-2', 'd-none')
+    $alertStatus.classList.add('alert' ,'mt-2', 'd-none', 'alert-success');
     document.querySelector('.container').appendChild($alertStatus)
 
 
