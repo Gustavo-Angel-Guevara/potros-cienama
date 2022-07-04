@@ -32,18 +32,10 @@
 
 					$pdf->SetFont('Times','I',14);
 					$pdf->SetXY(0,36);
-					$pdf->Cell(100,20,$row['nombrePelicula'],0,1,'C');
+					$pdf->Cell(100,20,utf8_decode($row['nombrePelicula']),0,1,'C');
 
 					$rutaImagen = 'C:/xampp/htdocs/cine/temp/pelicula_'.$row['idPelicula'].'.png';
 					$pdf->Image($rutaImagen,22,50,60,60);
-
-
-					//Parámetros de la imagen:
-					//url o localización del recurso
-					//Posición X, Posición Y, Ancho y Alto
-					//$pdf->Image('https://enriqueromerodominguezcine.com/wp-content/uploads/2020/01/Enrique-Romero-Cine-series-y-peliculas-de-netflix-logo.png',20,8,20,20);
-
-					$pdf->Image('https://static.vecteezy.com/system/resources/previews/002/412/416/non_2x/horror-films-studio-movie-cinema-film-production-logo-design-icon-illustration-vector.jpg',1,2,15,15);
 
 					$pdf->SetFont('Times','',10);
 					$pdf->SetXY(22,104);
