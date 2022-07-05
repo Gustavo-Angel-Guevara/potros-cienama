@@ -63,8 +63,7 @@
 				$tam = 10;
 				$level = 'M';
 				$frameSize = 3;
-				$datos = "Pelicula ".$row['idPelicula']."\n".$row['nombrePelicula']."\n".$row['fecha']."\n".$row['nacionalidad']."\n".$row['idioma']."\n".$row['ColorPelicula']."\n".$row['Clasificacion']."\n".$row['sinopsis'];
-				$contenido = $datos;
+				$datos = "Pelicula ".$row['idPelicula']."\n".$row['nombrePelicula']."\n".$row['fecha']."\n".$row['nacionalidad']."\n".$row['idioma']."\n".$row['ColorPelicula']."\n".$row['Clasificacion']."\n".$row['fecha_estreno']."contenido = $datos;
 
 				QRcode::png($contenido, $filename, $level, $tam, $frameSize);
 
@@ -77,10 +76,13 @@
 			      <td>
 			      	<?PHP echo $row['nombrePelicula']; ?>
 
-			      </td>
 			      <td>
 			      	<?PHP echo $row['nacionalidad']; ?>
 			      </td>
+				  <td>
+			      	<?PHP echo $row['fecha_estreno']; ?>
+			      </td>
+				 
 			      <td>
 			      	<a href="detallePelicula.php?id=<?php echo $row['idPelicula'];?>">
 			      	  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eyeglasses" viewBox="0 0 16 16">

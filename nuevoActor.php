@@ -275,6 +275,7 @@
             <br><br>
             <center>
             <button type="button" data-bs-toggle="modal" data-bs-target="#modalNuevoActor"><h3>Guardar</h3> </button>
+            <input id="band" class="d-none" name="band" type="text" value="0">
             <br>
             <br>
             <button onclick="location.href='actores.php'" type="button"><h3>Regresar</h3> </button>
