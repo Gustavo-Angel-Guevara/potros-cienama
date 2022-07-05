@@ -52,6 +52,10 @@
 					<input data-validation='required maxLength-30' type="text" class="form-control" name="clasificacion" placeholder="Clasificacion">
 				</div>
 
+				<div class="col-lg-5">
+					<input data-validation='required' class="form-control" type="date" name="fecha_estreno">		
+				</div>
+
 				<div class="col-lg-8">
 					<textarea data-validation='required' class="form-control" name="sinopsis" placeholder="Sinopsis" rows="3"></textarea>
 				</div>
