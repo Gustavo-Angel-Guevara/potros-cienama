@@ -96,43 +96,45 @@ INSERT INTO `director` (`idDirector`, `nombreDirector`, `fechaNacimiento`, `pais
 -- Estructura de tabla para la tabla `pelicula`
 --
 
+DROP TABLE IF EXISTS `pelicula`;
+
 CREATE TABLE `pelicula` (
-  `idPelicula` int(11) NOT NULL,
+  `idPelicula` int(11) NOT NULL AUTO_INCREMENT,
   `nombrePelicula` varchar(150) DEFAULT NULL,
   `fecha` date DEFAULT NULL,
   `nacionalidad` varchar(30) DEFAULT NULL,
   `idioma` varchar(15) DEFAULT NULL,
   `ColorPelicula` varchar(20) DEFAULT NULL,
   `Clasificacion` varchar(30) DEFAULT NULL,
+  `fecha_estreno` date DEFAULT NULL,
   `sinopsis` text DEFAULT NULL,
-  `estatus` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `estatus` int(1) NOT NULL,
+  PRIMARY KEY (`idPelicula`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `pelicula`
---
-
-INSERT INTO `pelicula` (`idPelicula`, `nombrePelicula`, `fecha`, `nacionalidad`, `idioma`, `ColorPelicula`, `Clasificacion`, `sinopsis`, `estatus`) VALUES
-(3, 'animales fantasticos', '1111-02-01', 'USA', 'ingles', 'color', 'PG-13', 'En algún lugar de Europa, unos Aurores se encuentran a la caza de 					', 1),
-(4, 'suicide squad', '0000-00-00', 'usa', 'ingles', 'color', 'PG-13', 'Floyd Lawton entrena con un saco de boxeo hasta que el capitán Griggs lo interrumpe para traerle comida', 0),
-(5, 'Batman return', '0000-00-00', 'USA', 'ingles', 'color', 'PG-13', 'El súper héroe de la capa negra se enfrenta Ciudad Gótica de los malévolos planes del Pingüino.', 0),
-(7, 'Batman y superman', '0000-00-00', 'USA', 'ingles', 'color', 'PG-13', 'Batman se enfrenta a Superman, temeroso de que su afán de poder termine nublando', 0),
-(8, 'La mujer maravilla 2', '0000-00-00', 'Francia', 'frances', 'b/n', 'PG-18', 'Diana, hija de dioses y princesa de las amazonas, nunca ha salido de su isla. 					', 0),
-(9, 'Aquaman', '0000-00-00', 'USA', 'Ingles', 'color', 'PG-13', 'Aquaman debe recuperar el legendario Tridente de Atlan para salvar a la ciudad subacuática de Atlantis', 0),
-(14, 'los miserables', '0000-00-00', 'Francia', 'Frances', 'Color', 'Pg-13', 'Después de 19 años como prisionero, Jean Valjean es liberado por Javert,', 0),
-(15, 'Hombres de negro', '0000-00-00', 'USA', 'Ingles', 'color', 'PG-13', 'Un policía se une a una organización secreta del gobierno actividad extraterrestre en la Tierra.', 0),
-(17, 'hancock', '0000-00-00', 'Italiana', 'ingles', 'color', 'PG-13', 'Un desaliñado superhéroe llamado Hancock (Will Smith) protege a los ciudadanos de Los Ángeles,', 0),
-(18, 'Guardianes de la galaxia', '0000-00-00', 'USA', 'ingles', 'color', 'PG-13', 'Un aventurero espacial se convierte en la presa de unos cazadores de tesoros', 0),
-(19, 'Batman: el caballero de la noc', '0000-00-00', 'USA', 'INGLES', 'COLOR', 'PG-13', 'Batman tiene que mantener el equilibrio entre el heroísmo y el vigilantismo', 0),
-(21, 'Spiderman 3: far from home', '0000-00-00', 'Inglaterra', 'Inglés', 'Color', 'B15', 'Tom holland creará el multiverso y luchará contra los 3 venom.				', 0),
-(23, '545', '0000-00-00', '4554', 'vdd3', '33w23', '4554', 'bfdfdfvfvd', 1),
-(24, 'Las locuras del emperador', '0000-00-00', 'USA', 'Español', 'Color', 'A10', 'Cuzco es una llama que habla.', 1),
-(25, 'vbbv', '2021-10-12', 'vcvc', 'vc', 'vc', 'vc', 'vvc', 1),
-(26, 'Navidad 2021', '0000-00-00', 'Mexico', 'Español', 'Color', 'A10', 'La navidad más esperada llega a los cines', 1),
-(27, 'Acuaman', '0000-00-00', 'USA', 'English', 'Rojo', '10', 'Pez', 1),
-(28, 'dd', '0000-00-00', 'ada', 'Español', 'Rojo', '10', 'XD', 1),
-(29, 'XD', '0000-00-00', 'w', 'Español', 'as', 'sda', 'ad', 1),
-(30, 'd', '0000-00-00', 'USA', 'Español', 'Rojo', '10', 'dwd', 1);
+INSERT INTO `pelicula` VALUES 
+(1,"Lego Batman 2","0000-00-00","USA","Ingles","color","PG-13","2007-05-16","Batichica se une a los cruzados impedir que Señor Frio  terrible venganza\t\t\t\t\t",1),
+(3,"animales fantasticos","0000-00-00","usa","ingles","color","PG-13","2016-12-18","En algún lugar de Europa, unos Aurores se encuentran a la caza de alguien",1),
+(4,"suicide squad","0000-00-00","usa","ingles","color","PG-13","2016-08-04","Floyd Lawton entrena con un saco de boxeo hasta que el capitán Griggs lo interrumpe para traerle comida",1),
+(5,"Batman return","0000-00-00","USA","ingles","color","PG-13","1992-06-19","El súper héroe de la capa negra se enfrenta Ciudad Gótica de los malévolos planes del Pingüino.",1),
+(6,"la liga de la justicia","0000-00-00","USA,","ingles","color","PG-13","1992-06-19","Gracias a su renovada fe en la humanidad e inspirado por el acto de altruísmo de Superman,",1),
+(7,"Batman y superman","0000-00-00","USA","ingles","color","PG-13","2016-03-19","Batman se enfrenta a Superman, temeroso de que su afán de poder termine nublando",1),
+(8,"La mujer maravilla 2","0000-00-00","Francia","frances","b/n","PG-18","2020-12-25","Diana, hija de dioses y princesa de las amazonas, nunca ha salido de su isla. \t\t\t\t\t",1),
+(9,"Aquaman","0000-00-00","USA","Ingles","color","PG-13","2018-12-13","Aquaman debe recuperar el legendario Tridente de Atlan para salvar a la ciudad subacuática de Atlantis",1),
+(12,"Avengers: era de ultrón","0000-00-00","USA","Ingles","color","PG-13","2015-04-30","El director de la Agencia SHIELD decide reclutar a un equipo para salvar al mundo",1),
+(13,"Infinity war","0000-00-00","USA","Ingles","Color","PG-13","2018-04-27","Los superhéroes se alían para vencer al poderoso Thanos, el peor enemigo al que se han enfrentado",1),
+(14,"los miserables","0000-00-00","Francia","Frances","Color","Pg-13","2015-02-15","Después de 19 años como prisionero, Jean Valjean es liberado por Javert,",1),
+(15,"Hombres de negro","0000-00-00","USA","Ingles","color","PG-13","1997-08-01","Un policía se une a una organización secreta del gobierno actividad extraterrestre en la Tierra.",1),
+(16,"Piratas del Caribe La maldició","0000-00-00","USA","Ingles","color","PG-13","2003-08-01","Un herrero y un extraño pirata se unen para rescatar a una dama secuestrada",1),
+(17,"hancock","0000-00-00","Italiana","ingles","color","PG-13","2008-06-11","Un desaliñado superhéroe llamado Hancock (Will Smith) protege a los ciudadanos de Los Ángeles,",1),
+(18,"Guardianes de la galaxia","0000-00-00","USA","ingles","color","PG-13","2014-06-31","Un aventurero espacial se convierte en la presa de unos cazadores de tesoros",0),
+(19,"Batman: el caballero de la noc","0000-00-00","USA","INGLES","COLOR","PG-13","2008-06-18","Batman tiene que mantener el equilibrio entre el heroísmo y el vigilantismo",0),
+(21,"Spiderman 3: far from home","0000-00-00","Inglaterra","Inglés","Color","B15","2020-12-05","Tom holland creará el multiverso y luchará contra los 3 venom.\t\t\t\t",1),
+(22,"Toy story 4: woody dice adiós","0000-00-00","USA","Inglés","Color","A13","2019-05-21","Woody dejará a sus amigos por un viejo amor del pasado. Vive una aventura extraordinaria.\t\t",1),
+(23,545,"0000-00-00",4554,"vdd3","33w23",4554,"1978-08-21","bfdfdfvfvd",1),
+(24,"Las locuras del emperador","0000-00-00","USA","Español","Color","A10","2001-04-06","Cuzco es una llama que habla.",1),
+(25,"vbbv","2021-10-12","vcvc","vc","vc","vc","2021-10-12","vvc",1),
+(26,"Navidad 2021","0000-00-00","Mexico","Español","Color","A10","2022-12-31","La navidad más esperada llega a los cines",1);
 
 --
 -- Índices para tablas volcadas
