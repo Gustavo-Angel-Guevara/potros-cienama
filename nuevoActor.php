@@ -4,17 +4,31 @@
         <meta charset="utf-8">
 	    <title>Nuevo Actor</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="css/estiloActores.css">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </head>
     <body>
-        <h1>Agregar Nuevo Actor</h1>
+    <div class="container">
+          <hr>
+        <div class="cuadrado"><h1><center>Agregar Nuevo Actor</center> </h1></div>
+           <style> .cuadrado{
+           padding:5px;
+           margin:5px;
+           background-color: #a62424;
+           box-shadow: 0px 0px 60px red;
+           color: white; }
+           </style>
+		      	<br>
+          
+
+
         <form data-form='true' action="guardarActor.php" method="post">
-            <label for="nombre">Nombre Completo</label><span style="color: red !important; display: inline; float: none;">*</span>
+            <label for="nombre" style="color:white"><h3><center>Nombre Completo</h3></label></center><span style="color: red !important; display: inline; float: none;">*</span>
             <input data-validation='required maxLength-50' class="form-control" name="nombre" type="text" required>
             
-            <label for="pais">Nacionalidad</label><span style="color: red !important; display: inline; float: none;">*</span>      
+            <label for="pais" style="color:white"><h3>Nacionalidad</h3></label><span style="color: red !important; display: inline; float: none;">*</span>      
             <select name="pais">
-              <option value="Elegir" id="PICK" selected="selected" disabled>Elegir opción</option>
+              <option value="Elegir" id="PICK" selected="selected" disabled><h2> Elegir opción</h2></option>
                 <option value="Afganistán" id="AF">Afganistán</option>
                 <option value="Albania" id="AL">Albania</option>
                 <option value="Alemania" id="DE">Alemania</option>
@@ -254,10 +268,17 @@
                 <option value="Zimbabue" id="ZW">Zimbabue</option>
             </select>
             <br><br>
-            <span style="color: red !important; display: inline; float: none;">*</span><label>Campo Obligatorio</label>
+            
+            <span style="color: red !important; display: inline; float: none;"><h3>*</h3></span>
+            
+          </span><center> <label style="color:white"><h3>Campos Obligatorio</h3></label></center></h3>
             <br><br>
-            <button type="button" data-bs-toggle="modal" data-bs-target="#modalNuevoActor">Guardar</button>
-            <button onclick="location.href='actores.php'" type="button">Regresar</button>
+            <center>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#modalNuevoActor"><h3>Guardar</h3> </button>
+            <br>
+            <br>
+            <button onclick="location.href='actores.php'" type="button"><h3>Regresar</h3> </button>
+            </center>
             <div class="modal fade" id="modalNuevoActor" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
@@ -265,7 +286,7 @@
                       <h5 class="modal-title" id="staticBackdropLabel">Nuevo Registro de Actor</h5>
                     </div>
                     <div class="modal-body">
-                      Se creará un nuevo registro de actor en la base de datos.
+                      <h2>Se creará un nuevo registro de actor en la base de datos.</h2> 
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>

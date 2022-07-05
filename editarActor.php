@@ -4,7 +4,9 @@
         <meta charset="utf-8">
 	    <title>Nuevo Actor</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="css/estiloActores.css">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      
     </head>
     <body>
     <?php
@@ -18,12 +20,24 @@
 			while($row = $resultado->fetch_assoc())
 			{			
 		?>
-        <h1>Editar Registro Actor</h1>
+        
+        <div class="container">
+          <hr>
+        <div class="cuadrado"><h1><center>Editar Registro Actor</center> </h1></div>
+           <style> .cuadrado{
+           padding:5px;
+           margin:5px;
+           background-color: #a62424;
+           box-shadow: 0px 0px 60px red;
+           color: white; }
+           </style>
+		      	<br>
+
         <form data-form='true' action="guardarActor.php" method="post">
-            <label for="nombre">Nombre Completo</label><span style="color: red !important; display: inline; float: none;">*</span>
+            <label for="nombre" style="color:white"><h3>Nombre Completo</h3></label><span style="color: red !important; display: inline; float: none;">*</span>
             <input data-validation='required maxLength-50' class="form-control" name="nombre" type="text" value="<?php echo $row['nombre'];?>" required>
             
-            <label for="pais">Nacionalidad</label><span style="color: red !important; display: inline; float: none;">*</span>      
+            <label for="pais" style="color:white"> <h3>Nacionalidad</h3></label><span style="color: red !important; display: inline; float: none;">*</span>      
             <select name="pais">
                 <option value="Afganistán" <?php if($row['nacionalidad']=="Afganistán") echo 'selected="selected"'; ?>id="AF">Afganistán</option>
                 <option value="Albania" <?php if($row['nacionalidad']=="Albania") echo 'selected="selected"'; ?>id="AL">Albania</option>
@@ -264,10 +278,14 @@
                 <option value="Zimbabue" <?php if($row['nacionalidad']=="Zimbabue") echo 'selected="selected"'; ?>id="ZW">Zimbabue</option>
             </select>
             <br><br>
-            <span style="color: red !important; display: inline; float: none;">*</span><label>Campo Obligatorio</label>
+            </span><center> <label style="color:white"><h3>Campos Obligatorio</h3></label></center></h3>
             <br><br>
-            <button type="button" data-bs-toggle="modal" data-bs-target="#modalNuevoActor">Actualizar</button>
-            <button onclick="location.href='actores.php'" type="button">Regresar</button>
+            <center>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#modalNuevoActor"><h3>Actualizar</h3></button>
+            <br>
+            <br>
+            <button onclick="location.href='actores.php'" type="button"><h3>Regresar</h3></button>
+           </center>
             <div class="modal fade" id="modalNuevoActor" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">

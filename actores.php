@@ -28,10 +28,10 @@
             </style>
 			<br>
 			<br>
-			<a href="index.php" class="btn btn-info">Volver</a> 
-			<a href="" class="btn btn-success">+Agregar</a>
-			<a href="" class="btn btn-secondary">Generar reporte</a>
-			<a href="" class="btn btn-warning">Respaldo general</a>
+			<a href="index.php" class="btn btn--1">Volver</a> 
+			<a href="nuevoActor.php" class="btn btn--2">+Agregar</a>
+			<a href="" class="btn btn--3">Generar reporte</a>
+			<a href="" class="btn btn--4">Respaldo general</a>
 			<br>
 			<br>
 			</center>
@@ -53,15 +53,15 @@
 				mkdir($dir);
 		?>
 			
-		<table class="table table-dark ">
+		<table class="table table-light table-striped table-hover">
 		  <thead>
-		    <tr>
-		      <th scope="col">#</th>
-		      <th scope="col">Nombre actor</th>
-		      <th scope="col">Nacionalidad</th>
-		      <th scope="col">Editar</th>
-			  <th scope="col">Borrado lógico</th>
-			  <th scope="col">Borrado físico</th>
+		    <tr align="center">
+			<th class="bg-primary text-white" scope="col">#</th>
+			<th class="bg-secondary text-white" scope="col">Nombre actor</th>
+			<th class="bg-success text-white" scope="col">Nacionalidad</th>
+			<th class="bg-danger text-white" scope="col">Editar</th>
+			<th class="bg-warning text-white" scope="col">Borrado lógico</th>
+			<th class="bg-info text-white" scope="col">Borrado físico</th>
 		    </tr>
 		  </thead>
 		  <tbody>
