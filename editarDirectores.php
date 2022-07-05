@@ -23,7 +23,7 @@
 		?>
 		<h2 class="letraBlanca">Director: <?php echo $row['nombreDirector'];?></h2>
 
-		<form action="actualizarDirector.php" method="POST" data-form='true' data-rederigirURL="directores.php">
+		<form action="actualizarDirector.php" method="POST" data-form='true' data-redirigirURL="directores.php">
 			<div class="row">
 
 				<div class="col-lg-12">

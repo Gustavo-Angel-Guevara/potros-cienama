@@ -8,6 +8,9 @@
 	$clasi = $_POST["clasificacion"];
 	$sin = $_POST["sinopsis"];
 	$band = $_POST["band"];
+	if($band != 0){
+		error_reporting(0);
+	}
 	/*echo "La pelicula se llama ".$nombreP."<br>";
 	echo "La fecha es ".$fecha."<br>";
 	echo "Nacionalidad: ".$nac."<br>Idioma: ".$idioma."<br>";
@@ -23,9 +26,6 @@
 		echo "Registro correcto <br>";
 		echo "<a href='peliculas.php'>Volver</a>";
 	}else{
-		//-----------------------------------------------------
-		error_reporting(0);
-
 		//--------------------Respuesta Enviada a la petición FETCH del js/validaciones.js
 		if($ejecutar){
 			$res = [
