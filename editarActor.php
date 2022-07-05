@@ -33,7 +33,9 @@
            </style>
 		      	<br>
 
-        <form data-form='true' action="guardarActor.php" method="post">
+        <form data-form='true' action="actualizarActor.php" method="post">
+        <label for="nombre" style="color:white"><h3>Id Actor</h3></label><span style="color: red !important; display: inline; float: none;">*</span>
+            <input data-validation='required maxLength-50' class="form-control" name="id" type="text" value="<?php echo $row['idActor'];?>" required>
             <label for="nombre" style="color:white"><h3>Nombre Completo</h3></label><span style="color: red !important; display: inline; float: none;">*</span>
             <input data-validation='required maxLength-50' class="form-control" name="nombre" type="text" value="<?php echo $row['nombre'];?>" required>
             
@@ -282,6 +284,7 @@
             <br><br>
             <center>
             <button type="button" data-bs-toggle="modal" data-bs-target="#modalNuevoActor"><h3>Actualizar</h3></button>
+            <input id="band" class="d-none" name="band" type="text" value="0">
             <br>
             <br>
             <button onclick="location.href='actores.php'" type="button"><h3>Regresar</h3></button>
