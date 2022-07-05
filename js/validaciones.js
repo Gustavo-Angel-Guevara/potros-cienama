@@ -1,18 +1,8 @@
- //Jair Efren Ortega Reyes
-
- //=============================================================================================================================
- //  Script para validar inputs cada input a validar debe tener la data-validation='tiposValidaciones' y un atributo 'name'
- //  también permite manejar el submit manualmente agregando -> data-form='true' en el form. 
-//==============================================================================================================================
-
-
-//==============================================================================================================================
-//                          ARREGLO CON OBJETOS CADA OBJETO CORRESPONDE A UN TIPO DE VALIDACIÓN 
-    
-//   ATRIBUTOS:
-//   name -> 'nombre de la validación misma que se debe agregar como valor del data-validation.'
-//   inputs -> Arreglo vacio
-//   methodValidation -> Función para validar hay 2 tipos una con Expresiones Regulares y otras sin Expresiones Regulares
+//=============================================================================================================================
+ //  Script para validar inputs cada input a validar debe tener la data-validation='tipos-Validaciones' y un atributo 'name'
+ //  también permite manejar el submit manualmente agregando -> data-form='true' en el form y para volver a la tabla
+ //  de registros despues de un registro o actualización es necesario agregar el data-redirigirURL = "URL DE LA TABLA DE REGISTROS"
+ //  
 //==============================================================================================================================
 const tiposValidaciones = [
     { 
@@ -312,9 +302,9 @@ const manejarSubmit = ($alertStatus, e, url)=>{
         let Redirigiendo = null;
 
         //Seleccionar el tipo de alerta Error o Exitoso
-        if(json.err){$alertStatus.classList.replace('alert-success', 'alert-danger')
+        if(json.err){$alertStatus.classList.add('alert', 'alert-danger')
         }else if(!json.err){    
-            $alertStatus.classList.replace('alert-danger', 'alert-success'); e.target.reset()
+            $alertStatus.classList.add('alert', 'alert-success'); e.target.reset()
             $alertStatus.textContent += '. Redirigiendo'
             let count = 0;
             Redirigiendo = setInterval(()=>{                       
@@ -378,7 +368,7 @@ export default function(){
 
     //Alerta de Confirmación de registro y actualización
     const $alertStatus = document.createElement('div');
-    $alertStatus.classList.add('alert' ,'mt-2', 'd-none', 'alert-success');
+    $alertStatus.classList.add('alert' ,'mt-2', 'd-none')
     document.querySelector('.container').appendChild($alertStatus)
 
 
@@ -391,7 +381,9 @@ export default function(){
                 $errorSubmit.classList.remove('d-none')
                 document.querySelector('[data-warn]').insertAdjacentElement('beforebegin', $errorSubmit)
             }else{
-                manejarSubmit($alertStatus, e, 'peliculas.php');//Para manejar manualmente el comportamiento del Submit
+                //manejarSubmit($alertStatus, e, 'peliculas.php');//Para manejar manualmente el comportamiento del Submit
+                manejarSubmit($alertStatus, e, e.target.dataset.rederigirurl);//Para manejar manualmente el comportamiento del Submit
+
             }
         }
     })

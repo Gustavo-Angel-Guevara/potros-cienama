@@ -8,7 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="css/estiloCine1.css">
 </head>
 <body>
-
 	<div class="container centrado">
 
 		<h2 class="letraBlanca">Bienvenido a cinema CUH</h2>

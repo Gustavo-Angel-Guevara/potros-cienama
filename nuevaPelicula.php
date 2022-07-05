@@ -37,7 +37,11 @@
 					<input data-validation='required only-words maxLength-15' class="form-control" type="text" name="idioma" placeholder="Idioma">
 				</div>
 				<div class="col-lg-3">
-					<input data-validation='required only-words maxLength-20' class="form-control" type="text" name="color" placeholder="Color">
+					<!--<input data-validation='required only-words maxLength-20' class="form-control" type="text" name="color" placeholder="Color">-->
+				<select name= "color">
+					<option value ="color">color</option>
+					<option value ="Blanco y Negro">Blanco y Negro</option>
+				 </select>
 				</div>
 
 				<div class="col-lg-12">
@@ -46,6 +50,10 @@
 
 				<div class="col-lg-4">
 					<input data-validation='required maxLength-30' type="text" class="form-control" name="clasificacion" placeholder="Clasificacion">
+				</div>
+
+				<div class="col-lg-5">
+					<input data-validation='required' class="form-control" type="date" name="fecha_estreno">		
 				</div>
 
 				<div class="col-lg-8">
@@ -78,6 +86,6 @@
 			<div class="sk-flow-dot"></div>
 		</div>
 	</div>
-	<script src='./js/index.js' type='module'></script> <!--IMPORTANT-->
+	<script src='./js/index.js' type='module'></script> <!--IMPORTANT--> <!--Este index no me direcciona a ningun liugar, me da error 404-->
 </body>
 </html>
