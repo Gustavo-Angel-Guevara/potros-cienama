@@ -48,6 +48,7 @@
 		      <th scope="col">#</th>
 		      <th scope="col">Nombre pelicula</th>
 		      <th scope="col">Nacionalidad</th>
+			  <th scope="col">Fecha de Estreno</th>
 		      <th scope="col">Detalle</th>
 		      <th scope="col">Editar</th>
 			  <th scope="col">Borrado lógico</th>
@@ -63,8 +64,9 @@
 				$tam = 10;
 				$level = 'M';
 				$frameSize = 3;
-				$datos = "Pelicula ".$row['idPelicula']."\n".$row['nombrePelicula']."\n".$row['fecha']."\n".$row['nacionalidad']."\n".$row['idioma']."\n".$row['ColorPelicula']."\n".$row['Clasificacion']."\n".$row['fecha_estreno']."contenido = $datos;
-
+				$datos = "Pelicula ".$row['idPelicula']."\n".$row['nombrePelicula']."\n".$row['fecha']."\n".$row['nacionalidad']."\n".$row['idioma']."\n".$row['ColorPelicula']."\n".$row['Clasificacion']."\n".$row['fecha_estreno'];
+				$contenido = $datos;
+				
 				QRcode::png($contenido, $filename, $level, $tam, $frameSize);
 
 				
