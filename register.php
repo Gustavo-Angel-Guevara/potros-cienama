@@ -53,6 +53,10 @@
             </div>
         </form>
 
+        <div ALIGN=center>
+            <h5>¿Ya tienes cuenta? <a class="texto" href="login.php"><strong>Ingresa aqui</strong></a></h5>
+        </div> 
+
 	</div>
 
     <script src='./js/index.js' type='module'></script> <!--IMPORTANT-->
