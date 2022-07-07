@@ -2,17 +2,24 @@
 
 $nombre = $_POST["nombre"];   
 $pais = $_POST["pais"];   
-$fecha = date("fecha");
+$fecha = $_POST["fecha"];
 $band = $_POST["band"];
 
+if($band != 0){
+	error_reporting(0);
+}
   
 $conexion = new mysqli("localhost","root","","peliculas");
-$_GRABAR_SQL = "INSERT INTO director (idDirector,nombreDirector,fechaNacimiento,pais) VALUES (null,'$nombre','$fecha','$pais')";   
- 
-$ejecutar = mysql_query($_GRABAR_SQL,$conexion);
+$_GRABAR_SQL = "INSERT INTO director (idDirector,nombreDirector,fechaNacimiento,pais, estatus) 
+				VALUES (null,'$nombre','$fecha','$pais', 1)";   
 
+$ejecutar = mysqli_query($conexion, $_GRABAR_SQL);
 
- if($ejecutar){
+if($band == "0"){
+	echo "Registro guardado con Éxito";
+	echo "<a href='directores.php'>Volver</a>";
+}else {
+	if($ejecutar){
 			$res = [
 				"err" => false,
 				"message" => "Registro guardado con Éxito"
@@ -24,11 +31,8 @@ $ejecutar = mysql_query($_GRABAR_SQL,$conexion);
 			];
 		}
 
-		echo json_encode($res);
-		//-----------------------------------------------------
-	
-
-
-		
+	echo json_encode($res);
+	//-----------------------------------------------------
+}
 
 ?>
