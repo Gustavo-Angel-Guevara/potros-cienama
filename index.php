@@ -56,7 +56,7 @@
         <div class = " seccioncinema mt-3">
             <div class="box">
                 <div class="hover">
-                        <h1>Cinema CUH</h1>
+                        <h1>Cinema UPP</h1>
                 </div>
             </div>
           
