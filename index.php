@@ -10,7 +10,7 @@
 <body>
 	<div class="container centrado">
 
-		<h2 class="letraBlanca">Bienvenido a cinema CUH</h2>
+		<h2 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 50px; color: white; text-shadow: 5px 5px 5px black;">Bienvenido a cinema CUH</h2>
 
 		<div class="row">
 			<div class="col-lg-4">

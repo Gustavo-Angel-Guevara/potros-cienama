@@ -17,15 +17,20 @@
 		<br><br><br><br>
 	</div>
 	<div class="container">
-		<h2 class="letraBlanca">
-			Lista de películas
+		<h2 class="letraBlanca" style="text-shadow: 5px 5px 5px black;">
+			<center>PELICULAS DISPONIBLES
 			<br>
-			<a href="index.php" class="btn btn-info">Volver</a>
-			<a href="nuevaPelicula.php" class="btn btn-success">+Agregar</a>
-			<a href="reportePeliculas.php" class="btn btn-secondary">Generar reporte</a>
-			<a href="respaldoGeneral.php" class="btn btn-warning">Respaldo general</a>
+	</center>
 		</h2>
-		
+		<center>
+			<br>
+		    <a href="index.php" class="btn btn--1">Volver</a>
+			<a href="nuevaPelicula.php" class="btn btn--2">Agregar</a>
+			<a href="reportePeliculas.php" class="btn btn--3">Generar reporte</a>
+			<a href="respaldoGeneral.php" class="btn btn--4">Respaldo general</a>
+	        <br>
+		</center>
+		<br>
 		<?PHP 
 			//variable que conecta con mysql
 			//parámetros: servidor, usuario, contraseña, BD
@@ -42,7 +47,7 @@
 				mkdir($dir);
 		?>
 			
-		<table class="table table-dark table-striped table-hover">
+		<table class="table table-dark table-striped table-hover" style="font-family: sans-serif; text-shadow: 2px 2px 2px black;">
 		  <thead>
 		    <tr>
 		      <th scope="col">#</th>

@@ -8,10 +8,54 @@ body{
 }
 
 .letraBlanca{
+	font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 80px;
 	color: white;
 
 }
+.btn{
+	position:relative;
+	height: 40px;
+	width: 150px;
+	border-radius: 4px;
+	text-transform: uppercase;
+	background-color:transparent;
+	color: #fff;
+	font-size: 12px;
+	overflow: hidden;
+	transition: all 500ms ease;
+	border: 2px solid #fff;
+	margin-bottom: 10px;
+	z-index: 0;
+	font-weight: 700;
+}
 
+.btn:hover{
+	color:#fff;
+	background-color: #20e2d7;
+	border: 2px solid #12655A;
+}
+
+.btn--1:hover{
+	color:black;
+	background-color: #A9FFE9;
+	border: 2px solid #32A798;
+}
+.btn--2:hover{
+	color:black;
+	background-color: #D89CFF;
+	border: 2px solid #8F00FF;
+}
+.btn--3:hover{
+	color:black;
+	background-color: #B8FF9D;
+	border: 2px solid #46FF00;
+}
+.btn--4:hover{
+	color:black;
+	background-color: #FFDB94;
+	border: 2px solid #FFA900;
+}
 
 .fondoClaro{
 	color: white;
