@@ -1,0 +1,114 @@
+body{
+    margin: 10px;
+    
+}
+
+.seccion .card .imagen{
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    padding: 3px;
+    background: #7d2ae8;
+}
+
+.seccion .card .imagen img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.card{
+    border-radius: 20px;
+    background: #fff;
+    align-items: center;
+    width: 305px;
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    height: 35%;
+    width: 100%;
+    background-color: #7d2ae8;
+    border-radius: 20px 20px 0 0;
+}
+
+.card .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    z-index: 100;
+}
+
+.card .media-icons{
+    padding: 5PX;
+    font-family: Arial;
+}
+
+.card .nombre-rol{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nombre-rol .nombre{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nombre-rol .rol{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.texto{
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #7d2ae8;
+    font-family: Arial;
+}
+
+.cover{
+    height: 10px;
+    background-color: gray;
+    color: black;  
+}
+
+.separar{
+    height: 80px;
+    background-color: #7d2ae8;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.borde{
+    height: 30px;
+    background-color: #ffffff;
+    color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+.glass{
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgb(0, 0, 0, 0.3);
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 20px;
+    border: 2px solid rgba( 255, 255, 255, 0.18 );
+}
+
+nav{
+    font-family: Arial ;
+}
+
+.lil{
+    text-decoration: none !important;
+}
