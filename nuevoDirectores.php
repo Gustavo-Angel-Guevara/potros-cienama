@@ -14,7 +14,7 @@
 	<div class="container centrado" align="center">
 		<h2 class="letraBlanca">Agregar nuevos Directores</h2>
 
-		<form data-form='true' action="guardarDirector.php" method="POST">
+		<form action="guardarDirector.php" method="POST">
 			<div class="row">
 
 				<div class="col-lg-12">
@@ -50,7 +50,7 @@
 
 				<div class="col-lg-2">
 					<input type="submit" class="btn btn-primary" value="Guardar" >
-					
+					<input type="hidden" name="band" value=0 >
 				</div>
 
 

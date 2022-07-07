@@ -6,8 +6,8 @@ $fecha = date("fecha");
 $band = $_POST["band"];
 
   
-$conexion = new mysqli("localhost:8080","root","","peliculas");
-$_GRABAR_SQL = "INSERT INTO $director (idDirector,nombreDirector,fechaNacimiento,pais) VALUES (null,'$nombre','$fecha','$pais')";   
+$conexion = new mysqli("localhost","root","","peliculas");
+$_GRABAR_SQL = "INSERT INTO director (idDirector,nombreDirector,fechaNacimiento,pais) VALUES (null,'$nombre','$fecha','$pais')";   
  
 $ejecutar = mysql_query($_GRABAR_SQL,$conexion);
 
