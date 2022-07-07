@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 06-07-2022 a las 01:08:31
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 8.1.6
+-- Servidor: 127.0.0.1:3306
+-- Tiempo de generación: 07-07-2022 a las 20:02:40
+-- Versión del servidor: 8.0.27
+-- Versión de PHP: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,36 +27,39 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `actor`
 --
 
-CREATE TABLE `actor` (
-  `idActor` int(11) NOT NULL,
+DROP TABLE IF EXISTS `actor`;
+CREATE TABLE IF NOT EXISTS `actor` (
+  `idActor` int NOT NULL,
   `nombre` varchar(30) DEFAULT NULL,
-  `nacionalidad` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `nacionalidad` varchar(20) DEFAULT NULL,
+  `estatus` int NOT NULL DEFAULT '1',
+  PRIMARY KEY (`idActor`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `actor`
 --
 
-INSERT INTO `actor` (`idActor`, `nombre`, `nacionalidad`) VALUES
-(1, 'George Clooney', 'USA'),
-(2, 'Christian Bale', 'BritanicoEstadounide'),
-(3, 'Edward John David Redmayne', 'inglaterra'),
-(4, 'Margot Robbie', 'australiana'),
-(5, 'Michael Keaton', 'USA'),
-(6, 'Ben Affleck', 'USA'),
-(7, 'Henry Cavill', 'britanico'),
-(8, 'Gal Gadot', 'Israel'),
-(9, 'Jason Momoa', 'USA'),
-(10, 'Vin Diesel', 'USA'),
-(11, 'Mark Ruffalo', 'USA'),
-(12, 'Robert Downey Jr.', 'USA'),
-(13, 'Robert Downey Jr.', 'USA'),
-(14, 'Hugh Jackman', 'Australia'),
-(15, 'Will Smith', 'USA'),
-(16, 'Johnny Depp', 'USA'),
-(17, 'Will Smith', 'USA'),
-(18, 'Chris Pratt', 'USA'),
-(19, 'Christian Bale', 'Reino Unido');
+INSERT INTO `actor` (`idActor`, `nombre`, `nacionalidad`, `estatus`) VALUES
+(1, 'George Clooney', 'USA', 1),
+(2, 'Christian Bale', 'BritanicoEstadounide', 1),
+(3, 'Edward John David Redmayne', 'inglaterra', 1),
+(4, 'Margot Robbie', 'australiana', 1),
+(5, 'Michael Keaton', 'USA', 1),
+(6, 'Ben Affleck', 'USA', 1),
+(7, 'Henry Cavill', 'britanico', 1),
+(8, 'Gal Gadot', 'Israel', 1),
+(9, 'Jason Momoa', 'USA', 1),
+(10, 'Vin Diesel', 'USA', 1),
+(11, 'Mark Ruffalo', 'USA', 1),
+(12, 'Robert Downey Jr.', 'USA', 1),
+(13, 'Robert Downey Jr.', 'USA', 1),
+(14, 'Hugh Jackman', 'Australia', 1),
+(15, 'Will Smith', 'USA', 1),
+(16, 'Johnny Depp', 'USA', 1),
+(17, 'Will Smith', 'USA', 1),
+(18, 'Chris Pratt', 'USA', 1),
+(19, 'Christian Bale', 'Reino Unido', 1);
 
 -- --------------------------------------------------------
 
@@ -64,13 +67,15 @@ INSERT INTO `actor` (`idActor`, `nombre`, `nacionalidad`) VALUES
 -- Estructura de tabla para la tabla `director`
 --
 
-CREATE TABLE `director` (
-  `idDirector` int(11) NOT NULL,
+DROP TABLE IF EXISTS `director`;
+CREATE TABLE IF NOT EXISTS `director` (
+  `idDirector` int NOT NULL AUTO_INCREMENT,
   `nombreDirector` varchar(30) DEFAULT NULL,
   `fechaNacimiento` date DEFAULT NULL,
   `pais` varchar(30) DEFAULT NULL,
-  `estatus` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `estatus` int NOT NULL,
+  PRIMARY KEY (`idDirector`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `director`
@@ -88,7 +93,8 @@ INSERT INTO `director` (`idDirector`, `nombreDirector`, `fechaNacimiento`, `pais
 (16, 'Gore Verbinski', '1964-03-16', 'USA', 1),
 (17, 'Peter Berg', '1964-03-11', 'USA', 1),
 (18, 'James Gunn', '1966-08-05', 'USA', 1),
-(19, 'Christopher Nolan', '1970-07-30', 'londes', 1);
+(19, 'Christopher Nolan', '1970-07-30', 'londes', 1),
+(20, 'Jorge autoincrementable', '2012-07-11', 'México', 1);
 
 -- --------------------------------------------------------
 
@@ -96,8 +102,9 @@ INSERT INTO `director` (`idDirector`, `nombreDirector`, `fechaNacimiento`, `pais
 -- Estructura de tabla para la tabla `pelicula`
 --
 
-CREATE TABLE `pelicula` (
-  `idPelicula` int(11) NOT NULL,
+DROP TABLE IF EXISTS `pelicula`;
+CREATE TABLE IF NOT EXISTS `pelicula` (
+  `idPelicula` int NOT NULL AUTO_INCREMENT,
   `nombrePelicula` varchar(150) DEFAULT NULL,
   `fecha` date DEFAULT NULL,
   `nacionalidad` varchar(30) DEFAULT NULL,
@@ -105,9 +112,10 @@ CREATE TABLE `pelicula` (
   `ColorPelicula` enum('color','Blanco y Negro') DEFAULT NULL,
   `Clasificacion` varchar(30) DEFAULT NULL,
   `fecha_estreno` date DEFAULT NULL,
-  `sinopsis` text DEFAULT NULL,
-  `estatus` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `sinopsis` text,
+  `estatus` int NOT NULL,
+  PRIMARY KEY (`idPelicula`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `pelicula`
@@ -137,37 +145,29 @@ INSERT INTO `pelicula` (`idPelicula`, `nombrePelicula`, `fecha`, `nacionalidad`,
 (25, 'vbbv', '2021-10-12', 'vcvc', 'vc', '', 'vc', '2021-10-12', 'vvc', 1),
 (26, 'Navidad 2021', '0000-00-00', 'Mexico', 'Español', 'color', 'A10', '2022-12-31', 'La navidad más esperada llega a los cines', 1);
 
---
--- Índices para tablas volcadas
---
+-- --------------------------------------------------------
 
 --
--- Indices de la tabla `actor`
---
-ALTER TABLE `actor`
-  ADD PRIMARY KEY (`idActor`);
-
---
--- Indices de la tabla `director`
---
-ALTER TABLE `director`
-  ADD PRIMARY KEY (`idDirector`);
-
---
--- Indices de la tabla `pelicula`
---
-ALTER TABLE `pelicula`
-  ADD PRIMARY KEY (`idPelicula`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
+-- Estructura de tabla para la tabla `usuario`
 --
 
+DROP TABLE IF EXISTS `usuario`;
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `idUsuario` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(40) NOT NULL,
+  `correo` varchar(25) NOT NULL,
+  `user` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `pass` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  PRIMARY KEY (`idUsuario`)
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 --
--- AUTO_INCREMENT de la tabla `pelicula`
+-- Volcado de datos para la tabla `usuario`
 --
-ALTER TABLE `pelicula`
-  MODIFY `idPelicula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+INSERT INTO `usuario` (`idUsuario`, `nombre`, `correo`, `user`, `pass`) VALUES
+(1, 'admin', 'a@gmail.com', 'admin', '1234'),
+(2, 'jose', 'j@gmail.ocm', 'jose', '1234');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
