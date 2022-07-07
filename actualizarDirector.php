@@ -4,6 +4,11 @@
 	$fechaNacimiento = $_POST['fechaNacimiento'];
 	$pais = $_POST['pais'];
 	$band = $_POST["band"];
+
+	if($band != 0){
+		error_reporting(0);
+	}
+
 	//Servidor, usuario, contraseña, BD
 	$conexion = new mysqli("localhost","root","", "peliculas");
 	$consulta = "UPDATE director SET 
@@ -21,9 +26,6 @@
 		echo "Datos actualizados";
 		echo "<a href='directores.php'>Volver</a>";
 	}else{
-		//-----------------------------------------------------
-		error_reporting(0);
-
 		//--------------------Respuesta Enviada a la petición FETCH del js/validaciones.js
 		if($conexion->query($consulta)){
 			$res = [

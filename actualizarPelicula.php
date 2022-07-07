@@ -9,6 +9,11 @@
 	$clasificacion = $_POST['clasificacion'];
 	$sinopsis = $_POST['sinopsis'];
 	$band = $_POST["band"];
+
+	if($band != 0){
+		error_reporting(0);
+	}
+
 	//Servidor, usuario, contraseña, BD
 	$conexion = new mysqli("localhost","root","", "peliculas");
 	$consulta = "UPDATE pelicula SET 
@@ -30,9 +35,6 @@
 		echo "Datos actualizados";
 		echo "<a href='peliculas.php'>Volver</a>";
 	}else{
-		//-----------------------------------------------------
-		error_reporting(0);
-
 		//--------------------Respuesta Enviada a la petición FETCH del js/validaciones.js
 		if($conexion->query($consulta)){
 			$res = [

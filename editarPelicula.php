@@ -24,7 +24,7 @@
 		?>
 		<h2 class="letraBlanca">Editar pelicula: <?php echo $row['nombrePelicula'];?></h2>
 
-		<form action="actualizarPelicula.php" method="POST" data-form='true'>
+		<form action="actualizarPelicula.php" method="POST" data-form='true' data-redirigirURL="peliculas.php">
 			<div class="row">
 
 				<div class="col-lg-12">

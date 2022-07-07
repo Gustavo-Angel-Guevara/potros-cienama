@@ -2,9 +2,19 @@
  //  Script para validar inputs cada input a validar debe tener la data-validation='tipos-Validaciones' y un atributo 'name'
  //  también permite manejar el submit manualmente agregando -> data-form='true' en el form y para volver a la tabla
  //  de registros despues de un registro o actualización es necesario agregar el data-redirigirURL = "URL DE LA TABLA DE REGISTROS"
- //  
 //==============================================================================================================================
-const tiposValidaciones = [
+
+
+//==============================================================================================================================
+//                          ARREGLO CON OBJETOS CADA OBJETO CORRESPONDE A UN TIPO DE VALIDACIÓN 
+
+//   ATRIBUTOS:
+//   name -> 'nombre de la validación misma que se debe agregar como valor del data-validation.'
+//   inputs -> Arreglo vacio
+//   methodValidation -> Función para validar hay 2 tipos una con Expresiones Regulares y otras sin Expresiones Regulares
+//==============================================================================================================================
+
+ const tiposValidaciones = [
     { 
         name : 'only-words',
         inputs:[],
@@ -114,6 +124,25 @@ const tiposValidaciones = [
             }
             return true;
         }    
+    },
+    {
+        name: 'samePassword',
+        inputs:[],
+        methodValidation:(targetInput, $warn, estatusAnterior, required, displaywarnings)=>{//Método cuando no se usa un Expresion Regular
+            if(estatusAnterior || estatusAnterior === null){
+                let InputPassword = document.querySelector('input[type=password]');
+                let valueInput = targetInput.value
+                console.log(valueInput, 'y', InputPassword.value)
+                if(valueInput !== InputPassword.value){//VALIDATION --- Unicamente Cambiarla
+                    console.log("Hola");
+                    if(displaywarnings || displaywarnings == undefined){displayWarn($warn, 'La contraseña ya no es la misma', false, targetInput)}
+                    return false;
+                }
+            }else{
+                return false;
+            }
+            return true;
+        }
     }
 ]
 
@@ -121,12 +150,19 @@ const tiposValidaciones = [
 //ESTE MÉTODO COMPARA EL DATA-VALIDATION CON LA PROPIEDAD NOMBRE DEL LOS OBJETOS DEL ARREGLO 'tiposValidaciones' 
 function exists(dataAttribute, $input){  
     let flag = false;  
+    let regExp;
     if(dataAttribute !== 'required'){
         dataAttribute.forEach(el=>{
-            tiposValidaciones.forEach(obj =>{        
-                if(el.includes(obj.name)){ 
+            tiposValidaciones.forEach(obj =>{     
+                regExp = RegExp(`^${obj.name}$`, "gmi")
+                //if(el.includes(obj.name)){ 
+                  //  obj.inputs.push($input)
+                //}
+                
+                if(regExp.test(el)){
                     obj.inputs.push($input)
-                }            
+                }
+                
             })
         })
     }else{
@@ -230,7 +266,7 @@ const validar = (res, regExp, e, displaywarnings)=>{
                     
                     //Obtener que otros tipos de validaciones tiene el mismo input y aplicarlas
                     tiposValidaciones.forEach((obj) =>{
-                        regExp = RegExp(obj.name, "gmi")
+                        regExp = RegExp(`^${obj.name}$`, "gmi")
                         if((regExp.test(e.dataset.validation)) && (obj.name !== typeValidation)){    
                             res.push(obj.methodValidation(e, $warn, res[count], null, displaywarnings))                        
                             count++//Para recorrer el arreglo res[] y obtener la respuesta de la validacion anterior
@@ -340,6 +376,7 @@ export default function(){
         let dataAttribute = Object.values({...$input.dataset.validation.split(' ')})
         exists(dataAttribute, $input)
     })
+    console.log(tiposValidaciones)
 
     let res=[], regExp = null;
     
@@ -382,9 +419,14 @@ export default function(){
                 document.querySelector('[data-warn]').insertAdjacentElement('beforebegin', $errorSubmit)
             }else{
                 //manejarSubmit($alertStatus, e, 'peliculas.php');//Para manejar manualmente el comportamiento del Submit
-                manejarSubmit($alertStatus, e, e.target.dataset.rederigirurl);//Para manejar manualmente el comportamiento del Submit
+                manejarSubmit($alertStatus, e, e.target.dataset.redirigirurl);//Para manejar manualmente el comportamiento del Submit
 
             }
-        }
+        }else if(document.querySelector('.border-danger') || !validarSubmit(res, regExp, null, $inputs, false)){
+                e.preventDefault()
+                $errorSubmit.textContent = "Verifica o Ingresa los datos";
+                $errorSubmit.classList.remove('d-none')
+                document.querySelector('[data-warn]').insertAdjacentElement('beforebegin', $errorSubmit)
+        }        
     })
 }

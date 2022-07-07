@@ -29,7 +29,7 @@
 			<br>
 			<br>
 			<a href="index.php" class="btn btn--1">Volver</a> 
-			<a href="nuevoActor.php" class="btn btn--2">+Agregar</a>
+			<a href="nuevoActor.php" class="btn btn--2">+Agregar P</a>
 			<a href="" class="btn btn--3">Generar reporte</a>
 			<a href="" class="btn btn--4">Respaldo general</a>
 			<br>

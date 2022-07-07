@@ -12,7 +12,7 @@
 	<div class="container centrado">
 		<h2 class="letraBlanca">Agregar nueva pelicula</h2>
 
-		<form data-form='true' action="guardarPelicula.php" method="POST">
+		<form data-form='true' action="guardarPelicula.php" method="POST" data-redirigirURL="peliculas.php">
 			<div class="row">
 
 				<div class="col-lg-12">

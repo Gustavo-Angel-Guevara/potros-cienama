@@ -8,12 +8,24 @@
 	<link rel="stylesheet" type="text/css" href="css/estiloCine1.css">
 </head>
 <body>
-	<div class="container centrado">
-		<h2 class="letraBlanca">
-			Detalle película
-			<a href="peliculas.php" class="btn btn-info">Volver</a>
-		</h2>
+<style>
+	.letraBlanca-centrado{
+		color: white;
+		text-align: center;
+	}
+	.body{
+		background-image: "css/cortina.jpeg";
+	}
 
+</style>
+<a href="peliculas.php" class="btn btn-outline-info btn-lg">Volver</a>
+	<div class="container centrado">
+		
+			<h2 class="letraBlanca-centrado">
+				Detalle película
+				
+			</h2>
+		
 		<?php 
 			$idPelicula = $_GET['id'];
 			//echo "ID = ". $idPelicula;
@@ -51,55 +63,55 @@
 
 					QRcode::png($contenido, $filename, $level, $tam, $frameSize);
 
-					echo '<img src="'.$filename.'" width="50%"/>'; 
+					echo '<img src="'.$filename.'" width="45%"/>'; 
 			      ?>
 			  </th>
 		    </tr>
 		  </thead>
 		  <tbody>
-		  		<tr>
+		  		<tr class="table-info"> 
 			      <th scope="row">Nombre</th>
 			      <td>
 			      	<?PHP echo $row['nombrePelicula']; ?>
 			      </td>  
 			    </tr>
 
-			    <tr>
+			    <tr class="table-warning">
 			      <th scope="row">Fecha</th>
 			      <td>
 			      	<?PHP echo $row['fecha']; ?>
 			      </td>  
 			    </tr>
 
-			    <tr>
+			    <tr class="table-success">
 			      <th scope="col">Nacionalidad</th>
 			      <td>
 			      	<?PHP echo $row['nacionalidad']; ?>
 			      </td>
 			    </tr>
 
-			    <tr>
+			    <tr class="table-danger">
 			      <th scope="row">Idioma</th>
 			      <td>
 			      	<?PHP echo $row['idioma']; ?>
 			      </td>  
 			    </tr>
 
-			    <tr>
+			    <tr class="table-primary">
 			      <th scope="row">Color</th>
 			      <td>
 			      	<?PHP echo $row['ColorPelicula']; ?>
 			      </td>  
 			    </tr>
 
-			    <tr>
+			    <tr class="table-secondary">
 			      <th scope="row">Clasificación</th>
 			      <td>
 			      	<?PHP echo $row['Clasificacion']; ?>
 			      </td>  
 			    </tr>
 
-			    <tr>
+			    <tr class="table-light">
 			      <th scope="row">Sinopsis</th>
 			      <td>
 			      	<?PHP echo $row['sinopsis']; ?>
