@@ -1,0 +1,96 @@
+body{
+    margin: 10px;
+
+}
+
+/* CSS de la animacion Hover */
+
+body{
+    box-sizing: border-box;
+    font-family: monospace;
+    margin: 20px;
+}
+
+nav{
+    font-family: Arial ;
+}
+
+.lil{
+    text-decoration: none !important;
+}
+
+.seccioncinema{
+    background-image: url(imagenes/cinema.jpg);
+    height: 350px;
+    color: rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.seccionpeliculas{
+    background-image: url(imagenes/peliculas.jpg);
+    height: 350px;
+    color: rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.seccionactores{
+    background-image: url(imagenes/actores.jpg);
+    height: 350px;
+    color: rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.secciondirect{
+    background-image: url(imagenes/direct.jpg);
+    height: 350px;
+    color: rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.box{
+    
+    height: 350px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.box .hover{
+    width: 0%;
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.850);
+    position: absolute;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: .5s all;
+}
+
+.hover h1{
+    color: aliceblue;
+    text-shadow: 1px 1px 1px black;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+.box:hover .hover{
+    width: 100%;
+}
