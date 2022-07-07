@@ -6,11 +6,25 @@
 	<!-- CSS only -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/spinkit.css"><!--IMPORTANT-->
-	<link rel="stylesheet" type="text/css" href="css/estiloCine1.css">
+	<link rel="stylesheet" type="text/css" href="css/estiloDirectores.css">
+</style>
 </head>
 <body>
-	<div class="container centrado">
-		<h2 class="letraBlanca">Agregar nueva pelicula</h2>
+	<div class="miniespacio">
+		<br><br><br><br>
+	</div>
+	<div class="container">
+		<h2 class="letraNegra">
+			<center>
+			<div class="cuadrado">Agregar nueva pelicula</div>
+           <style> .cuadrado{
+           padding:5px;
+           margin:5px;
+           background-color: #a62424;
+           box-shadow: 0px 0px 60px red;
+           color: white; }
+           </style>
+		      	<br>
 
 		<form data-form='true' action="guardarPelicula.php" method="POST" data-redirigirURL="peliculas.php">
 			<div class="row">
@@ -20,7 +34,7 @@
 				</div>
 
 				<div class="col-lg-8">
-					<input data-validation='required maxLength-150' class="form-control" name="nombrePelicula" type="text" placeholder="Nombre de la pelicula">
+					<input data-validation='required maxLength-150' class="form-control" name="nombrePelicula" type="text" placeholder="Nombre de la pelicula*">
 				</div>
 				<div class="col-lg-4">
 					<input data-validation='required' class="form-control" type="date" name="fecha">		
@@ -31,17 +45,20 @@
 				</div>
 
 				<div class="col-lg-6">
-					<input data-validation='required only-words maxLength-30' class="form-control" type="text" name="nacionalidad" placeholder="Nacionalidad">
+					<input data-validation='required only-words maxLength-30' class="form-control" type="text" name="nacionalidad" placeholder="Nacionalidad*">
 				</div>
 				<div class="col-lg-3">
-					<input data-validation='required only-words maxLength-15' class="form-control" type="text" name="idioma" placeholder="Idioma">
+					<input data-validation='required only-words maxLength-15' class="form-control" type="text" name="idioma" placeholder="Idioma*">
 				</div>
+
 				<div class="col-lg-3">
-					<!--<input data-validation='required only-words maxLength-20' class="form-control" type="text" name="color" placeholder="Color">-->
+					<h3>
+					<!--<input data-validation='required only-words maxLength-15' class="form-control" type="text" name="color" placeholder="Color*">-->
 				<select name= "color">
 					<option value ="color">color</option>
 					<option value ="Blanco y Negro">Blanco y Negro</option>
 				 </select>
+					</h3>
 				</div>
 
 				<div class="col-lg-12">
@@ -49,7 +66,7 @@
 				</div>
 
 				<div class="col-lg-4">
-					<input data-validation='required maxLength-30' type="text" class="form-control" name="clasificacion" placeholder="Clasificacion">
+					<input data-validation='required maxLength-30' type="text" class="form-control" name="clasificacion" placeholder="Clasificacion*">
 				</div>
 
 				<div class="col-lg-5">
@@ -57,7 +74,8 @@
 				</div>
 
 				<div class="col-lg-8">
-					<textarea data-validation='required' class="form-control" name="sinopsis" placeholder="Sinopsis" rows="3"></textarea>
+						<br>
+					<textarea data-validation='required' class="form-control" name="sinopsis" placeholder="Sinopsis*" rows="3"></textarea>
 				</div>
 
 				<div class="col-lg-12">
@@ -68,9 +86,19 @@
 					
 				</div>
 
-				<div class="col-lg-2">
-					<input type="submit" class="btn btn-primary" value="Guardar">
+
+				<div class="col-lg-12">
+					<br>
+				</div>
+
+				<div class="col-lg-3">
+					<a href="peliculas.php" class="btn btn--1"">Volver</a>
+				</div>
+				<div class="col-lg-8">
+					
+					<input type="submit" class="btn btn--2" value="Guardar">
 					<input id="band" class="d-none" name="band" type="text" value="0"><!--IMPORTANT-->
+				<br><br><br>
 				</div>
 
 

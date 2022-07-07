@@ -6,7 +6,7 @@
 	<!-- CSS only -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/spinkit.css"><!--IMPORTANT-->
-	<link rel="stylesheet" type="text/css" href="css/estiloCine1.css">
+	<link rel="stylesheet" type="text/css" href="css/estiloDirectores.css">
 </head>
 <body>
 	<div class="container centrado">
@@ -22,7 +22,17 @@
 			while($row = $resultado->fetch_assoc())
 			{			
 		?>
-		<h2 class="letraBlanca">Editar pelicula: <?php echo $row['nombrePelicula'];?></h2>
+		<div class="container">
+          <hr>
+        <div class="cuadrado"><h1><center>Editar pelicula: <?php echo $row['nombrePelicula'];?></center> </h1></div>
+           <style> .cuadrado{
+           padding:5px;
+           margin:5px;
+           background-color: #a62424;
+           box-shadow: 0px 0px 60px red;
+           color: white; }
+           </style>
+		      	<br>
 
 		<form action="actualizarPelicula.php" method="POST" data-form='true' data-redirigirURL="peliculas.php">
 			<div class="row">
@@ -70,16 +80,20 @@
 				</div>
 
 				<div class="col-lg-9" data-warn>  <!--Data-warn sirve como referencia para insertar un mensaje al validar los campos-->
+					<br>
+				</div>
 					
+				<div class="col-lg-7">
+					<a href="peliculas.php" class="btn btn--1"">Volver</a>
 				</div>
 
-				<div class="col-lg-3">
-
+				<div class="col-lg-5">
 					<input type="hidden" name="idP" value="<?php echo $row['idPelicula'];?>">
 					<input id="band" class="d-none" name="band" type="text" value="0"><!--IMPORTANT-->
-					<input type="submit" class="btn btn-warning" value="Actualizar">
-				</div>
+					<input type="submit" class="btn btn--5" value="Actualizar">
 
+				</div>
+<br><br>
 
 			</div>
 			
