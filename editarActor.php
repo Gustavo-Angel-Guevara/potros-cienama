@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-	    <title>Nuevo Actor</title>
+	    <title>Edición de Actor</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="css/estiloActores.css">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -34,8 +34,8 @@
 		      	<br>
 
         <form data-form='true' action="actualizarActor.php" method="post">
-        <label for="nombre" style="color:white"><h3>Id Actor</h3></label><span style="color: red !important; display: inline; float: none;">*</span>
-            <input data-validation='required maxLength-50' class="form-control" name="id" type="text" value="<?php echo $row['idActor'];?>" required>
+       
+            <input data-validation='required maxLength-50' class="form-control" name="id" type="hidden" value="<?php echo $row['idActor'];?>" required>
             <label for="nombre" style="color:white"><h3>Nombre Completo</h3></label><span style="color: red !important; display: inline; float: none;">*</span>
             <input data-validation='required maxLength-50' class="form-control" name="nombre" type="text" value="<?php echo $row['nombre'];?>" required>
             
