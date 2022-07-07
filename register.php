@@ -18,34 +18,44 @@
 
 		<form action="" method="post">
             <div>
-                <label for="nombre">Nombre</label>
-                <input type="text" data-validation="required only-words maxLength-40" name="nombre" id="nombre" placeholder="Ingrese su nombre" value="" required>
+                <label for="nombre">Nombre <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg></label>
+                <input class="form-control" type="text" data-validation="required only-words maxLength-40" name="nombre" id="nombre" placeholder="Ingrese su nombre" value="" required>
             </div>
             <div>
-                <label for="correo">Correo</label>
-                <input type="text" data-validation="required maxLength-25 email" name="correo" id="correo" placeholder="Ingrese su correo" value="" required>
+                <label for="correo">Correo <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                </svg></label>
+                <input class="form-control" type="text" data-validation="required maxLength-25 email" name="correo" id="correo" placeholder="Ingrese su correo" value="" required>
             </div>
             <div>
-                <label for="user">Usuario</label>
-                <input type="text" data-validation="required maxLength-10" name="user" id="user" placeholder="Ingrese su usuario" value="" required>
+                <label for="user">Usuario <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg></label>
+                <input class="form-control" type="text" data-validation="required maxLength-10" name="user" id="user" placeholder="Ingrese su usuario" value="" required>
             </div>
             <div>
-                <label for="pass">Contraseña</label>
-                <input type="password" data-validation="required maxLength-10" name="pass" id="pass" placeholder="Ingrese su contraseña" value="" required>
+                <label for="pass">Contraseña <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                </svg></label>
+                <input class="form-control" type="password" data-validation="required maxLength-10" name="pass" id="pass" placeholder="Ingrese su contraseña" value="" required>
             </div>
             <div>
-                <label for="pass2">Repita su contraseña</label>
-                <input type="password" data-validation="required maxLength-10 samePassword" name="pass2" id="pass2" placeholder="Repita su contraseña" value="" required>
+                <label for="pass2">Repita su contraseña <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                </svg></label>
+                <input class="form-control" type="password" data-validation="required maxLength-10 samePassword" name="pass2" id="pass2" placeholder="Repita su contraseña" value="" required>
             </div>
             <div>
             <div class="col-lg-9" data-warn></div>
-                <input type="submit" name="crear" id="login" value="Registrarme">
+                <input class="form-control" type="submit" name="crear" id="login" value="Registrarme">
             </div>
         </form>
 
-        <div>
-            <h4>¿Ya tienes cuenta? <a href="login.php"><strong>Ingresa aqui</strong></a></h4>
-        </div>
+        <div ALIGN=center>
+            <h5>¿No tienes cuenta? <a class="texto" href="register.php"><strong>Registrate aqui</strong></a></h>
+        </div> 
 
 	</div>
 

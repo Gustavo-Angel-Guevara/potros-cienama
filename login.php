@@ -9,30 +9,41 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" charset="utf-8"></script>
 </head>
+
 <body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
 	<div class="containerLogin">
+        
 
-		<h2 class="letraBlanca">Bienvenido a cinema CUH</h2>
+		<h2 class="letraBlanca">Bienvenido a cinema UPP</h2>
 
 		<form action="" method="post" data-form='true'>
-            <div>
-                <label for="user">Usuario</label>
-                <input data-validation="required maxLength-10" type="text"  name="user" id="user" placeholder="Escriba su usuario" value="" required>
+            <div >
+                <label for="user">Usuario
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
+                </label>
+                <input class="form-control" data-validation="required maxLength-10" type="text"  name="user" id="user" placeholder="Escriba su usuario" value="" required>
             </div>
             <div>
-                <label for="pass">Contraseña</label>
-                <input data-validation="required maxLength-10" type="password"  name="pass" id="pass" placeholder="Escriba su contraseña" value="" >
+                <label for="pass">Contraseña  
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                 <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                </svg>
+                </label>
+                <input class="form-control" data-validation="required maxLength-10" type="password"  name="pass" id="pass" placeholder="Escriba su contraseña" value="" >
             </div>
             <div>
                 <div class="col-lg-9" data-warn></div>
-                <input type="submit" name="login" id="login" value="Login">
+                <input class="form-control" type="submit" name="login" id="login" value="Login">
             </div>
        
         </form> 
         
-        <div>
-            <h4>¿No tienes cuenta? <a href="register.php"><strong>Registrate aqui</strong></a></h4>
+        <div ALIGN=center>
+            <h5>¿No tienes cuenta? <a class="texto" href="register.php"><strong>Registrate aqui</strong></a></h>
         </div>        
 
 	</div>

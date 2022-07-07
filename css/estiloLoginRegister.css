@@ -1,5 +1,25 @@
+body{
+	background-image: url("https://static.vecteezy.com/system/resources/previews/002/217/896/non_2x/cinema-wallpaper-social-media-message-background-vector.jpg");
+}
+
+.a{
+    text-decoration: none;
+}
+
+.form-control{
+	justify-content: center;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.texto{
+	text-decoration: none;
+	color:rgb(92, 158, 221);
+	text-shadow: 1px 1px rgb(0, 0, 0);
+}
 
 body{	
+	
 	margin: 0;
 	padding: 0;
 	height: 100%;
@@ -12,14 +32,20 @@ body{
 	  ".";
 
 }
+
+
 .containerLogin{
+	
+	box-shadow: inset 0 0 2000px rgba(36, 33, 33, 0.5);
+	font-family: Cambria;
 	backdrop-filter: blur(20px);
 	-webkit-backdrop-filter: blur(20px);
 	justify-self: center; 
   	align-self: center; 
 	width: 40%;
-	border: 1px solid rgb(0, 0, 0);
-	
+	border: 2.5px solid rgb(184, 174, 174);
+	text-shadow: 1px 1px rgb(15, 14, 14);
+	color: aliceblue;
 }
 
 .containerLogin h2{
@@ -54,3 +80,4 @@ body{
     "."
     "."; 
 }
+
