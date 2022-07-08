@@ -64,20 +64,11 @@
 	</div>
 	<div class="container">
 		<h2 class="letraBlanca" style="text-shadow: 5px 5px 5px black;">
-			<center>PELICULAS DISPONIBLES
+			<center>PELICULAS DISPONIBLES</center>
 			<br>
-			
+	
 		</h2>
 		<br>
-		<center>
-		<h2>
-		<a href="index.php" class="btn btn--1">Volver</a>
-			<a href="nuevaPelicula.php" class="btn btn--2">+Agregar</a>
-			<a href="reportePeliculas.php" class="btn btn--2">Generar reporte</a>
-			<a href="respaldoGeneral.php" class="btn btn--3">Respaldo general</a>
-            <a href="peliculasInhabilitadas.php" class="btn btn--4">Peliculas inhabilitadas</a>
-	</h2>
-	</center>
 		<?PHP 
 			//variable que conecta con mysql
 			//parámetros: servidor, usuario, contraseña, BD
