@@ -1,11 +1,11 @@
 <?php
 
-	$idActor = $_GET['id'];
+	$idP = $_GET['id'];
 
 	$conexion = new mysqli("localhost","root","","peliculas");
-	$consulta = "UPDATE actor set estatus=0 WHERE idActor=$idActor";
+	$consulta = "UPDATE actor set estatus=1 WHERE idActor=$idP";
 	$conexion->query($consulta);
 
-	echo "Actor inhabilitado correctamente";
+	echo "Actor habilitado correctamente";
 	echo "<a href='actores.php'>Volver</a>"
 ?>
