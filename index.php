@@ -7,6 +7,7 @@
         <link href="style.css" rel="stylesheet" >
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" charset="utf-8"></script>
     </head>
+    <h2 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 50px; color: white; text-shadow: 5px 5px 5px black; width:100wv; text-align:center">Bienvenido a cinema CUH</h2>
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center align-items-center flex-column a">
@@ -17,7 +18,6 @@
                         <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
                       </svg> Home</a>
 
-		<h2 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 50px; color: white; text-shadow: 5px 5px 5px black;">Bienvenido a cinema CUH</h2>
 
                 <a class="btn btn-outline-dark m-2 d-flex justify-content-center align-items-center" href="directores.php"> 
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-camera-reels-fill" viewBox="0 0 16 16">

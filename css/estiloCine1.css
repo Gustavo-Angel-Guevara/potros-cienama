@@ -13,7 +13,7 @@ body{
 	color: white;
 
 }
-.btn{
+.container .btn{
 	position:relative;
 	height: 40px;
 	width: 150px;
@@ -30,28 +30,28 @@ body{
 	font-weight: 700;
 }
 
-.btn:hover{
+.container .btn:hover{
 	color:#fff;
 	background-color: #20e2d7;
 	border: 2px solid #12655A;
 }
 
-.btn--1:hover{
+.container .btn--1:hover{
 	color:black;
 	background-color: #A9FFE9;
 	border: 2px solid #32A798;
 }
-.btn--2:hover{
+.container .btn--2:hover{
 	color:black;
 	background-color: #D89CFF;
 	border: 2px solid #8F00FF;
 }
-.btn--3:hover{
+.container .btn--3:hover{
 	color:black;
 	background-color: #B8FF9D;
 	border: 2px solid #46FF00;
 }
-.btn--4:hover{
+.container .btn--4:hover{
 	color:black;
 	background-color: #FFDB94;
 	border: 2px solid #FFA900;
