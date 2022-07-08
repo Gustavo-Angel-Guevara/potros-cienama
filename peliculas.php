@@ -65,8 +65,14 @@
 	<div class="container">
 		<h2 class="letraBlanca" style="text-shadow: 5px 5px 5px black;">
 			<center>PELICULAS DISPONIBLES</center>
+			<h2>
 			<br>
-	
+			<center>
+			<a href="nuevaPelicula.php" class="btn btn--1">+Agregar</a>
+			<a href="reportePeliculas.php" class="btn btn--2">Generar reporte</a>
+			<a href="respaldoGeneral.php" class="btn btn--3">Respaldo general</a>
+	</center>
+		</h2>
 		</h2>
 		<br>
 		<?PHP 
