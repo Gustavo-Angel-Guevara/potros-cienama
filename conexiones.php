@@ -23,6 +23,9 @@ $conexion = new mysqli("localhost","root","","peliculas");
 //detallePelicula
 $conexion = new mysqli("localhost","root","","peliculas");
 
+//generarBoletos
+$conexion = new mysqli("localhost","root","","peliculas");
+
 //directres
 $conexion = new mysqli("localhost","root","","peliculas");
 
