@@ -6,6 +6,6 @@
 	$consulta = "UPDATE actor set estatus=0 WHERE idActor=$idActor";
 	$conexion->query($consulta);
 
-	echo "Actor inhabilitado correctamente";
+	echo "Actor Deshabilitado";
 	echo "<a href='actores.php'>Volver</a>"
 ?>
