@@ -6,12 +6,18 @@
 	<!-- CSS only -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/estiloCine1.css">
+	<link GB="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" GB="generarBoletos.php">
+
 </head>
 <body>
 <style>
 	.letraBlanca-centrado{
-		color: white;
+		color: red;
 		text-align: center;
+	}
+	.tabletable-dark table-striped table-hover-centrado{
+		align: center;
 	}
 	.body{
 		background-image: "css/cortina.jpeg";
@@ -22,11 +28,13 @@
 	<div class="container centrado">
 		
 			<h2 class="letraBlanca-centrado">
-				Detalle película
+				DETALLES DE LA PELICULA
+				<br>
 				
+		
 			</h2>
 		
-		<?php 
+			<?php 
 			$idPelicula = $_GET['id'];
 			//echo "ID = ". $idPelicula;
 
@@ -41,10 +49,13 @@
 
 			if(!file_exists($dir))
 				mkdir($dir);
-		?>
+				?>
 
-		<table class="table table-dark table-striped table-hover">
-		<?PHP
+		<table class="table table-dark table-striped table-hover-center">
+
+		
+		<?php 
+
 	  	//Ciclo para recorrer el objeto y sus datos
 		while($row = $resultado->fetch_assoc())
 		{
@@ -52,19 +63,24 @@
 		  <thead>
 		    <tr>
 		      <th scope="row">
-			      <?PHP 
-			      	echo "Pelicula: ".$row['idPelicula'];
+			  <?PHP 
+			  
+			      	echo "  ||  DETALLES GENERALES DE CADA PELICULA EN QR ESCANEABLE PARA LA PELICULA :    ".$row['idPelicula'];
 			      	$filename = $dir.'pelicula_'.$row['idPelicula'].'.png';
-					$tam = 10;
-					$level = 'M';
-					$frameSize = 3;
+					$tam = 12;
+					$level ='M';
+					$frameSize = 3; 
 					$datos = "Pelicula ".$row['idPelicula']."\n".$row['nombrePelicula']."\n".$row['fecha']."\n".$row['nacionalidad']."\n".$row['idioma']."\n".$row['ColorPelicula']."\n".$row['Clasificacion']."\n".$row['sinopsis'];
-					$contenido = $datos;
+					$contenido = $datos; 
 
-					QRcode::png($contenido, $filename, $level, $tam, $frameSize);
-
-					echo '<img src="'.$filename.'" width="45%"/>'; 
+					QRcode::png($contenido, $filename, $level, $tam, $frameSize); 
+ 
+					echo '<img src="'.$filename.'" width="60%"/>'; 
 			      ?>
+				  <br><br>
+				  <a class="btn btn-outline-info btn-lg" GB="generarBoletos.php"> 
+                <svg GB="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" width="24" height="24" fill="currentColor" class="bi bi-film" viewBox="0 0 16 16">
+                </svg>GENERAR BOLETOS PARA LA PELICULA</a>
 			  </th>
 		    </tr>
 		  </thead>
