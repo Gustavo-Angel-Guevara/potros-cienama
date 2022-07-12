@@ -78,7 +78,7 @@
 					echo '<img src="'.$filename.'" width="60%"/>'; 
 			      ?>
 				  <br><br>
-				  <a class="btn btn-outline-info btn-lg" GB="generarBoletos.php"> 
+				  <a class="btn btn-outline-info btn-lg" href="generarBoletos.php"> 
                 <svg GB="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" width="24" height="24" fill="currentColor" class="bi bi-film" viewBox="0 0 16 16">
                 </svg>GENERAR BOLETOS PARA LA PELICULA</a>
 			  </th>

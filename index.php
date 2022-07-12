@@ -53,7 +53,7 @@
   }  
 ?>
 
-      <a href="acerca.html" >
+      <a href="acerca.php" >
         <div class = " seccioncinema mt-3">
             <div class="box">
                 <div class="hover">
