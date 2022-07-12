@@ -282,7 +282,7 @@
           </span><center> <label style="color:white"><h3>Campos Obligatorio</h3></label></center></h3>
             <br><br>
             <center>
-            <button type="button" data-bs-toggle="modal" data-bs-target="#modalNuevoActor"><h3>Guardar</h3> </button>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#modalNuevoActor"href='guardarActor.php'><h3>Guardar</h3> </button>
             <input id="band" class="d-none" name="band" type="text" value="0">
             <br>
             <br>
