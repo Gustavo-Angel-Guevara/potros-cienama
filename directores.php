@@ -69,14 +69,18 @@
 		<br><br><br><br>
 	</div>
 	<div class="container">
-		<h2 class="letraBlanca">
-			Lista de directores:
+		<h2 class="letraBlanca" style="text-shadow: 3px 3px 3px black;">
+			<center>Lista de directores</center>
+		</h2>	
 			<br></br>
+			<center>
 			<a href="index.php" class="btn btn--1">Volver</a>
 			<a href="nuevoDirectores.php" class="btn btn--2">+Agregar</a>
 			<a href="reporteDirectores.php" class="btn btn--3">Generar reporte</a>
 			<a href="respaldoGeneral.php" class="btn btn--4">Respaldo general</a>
-		</h2>
+			</center>
+		
+		
 		
 		<?PHP 
 			//variable que conecta con mysql
@@ -94,7 +98,7 @@
 				mkdir($dir);
 		?>
 			
-		<table class="table table-light table-striped table-hover">
+		<table class="table table-light table-striped table-striped table-hover" style="font-family: sans-serif;">
 		  <thead>
 		    <tr align="center">
 		      <th class="bg-primary text-white" scope="col">#</th>
@@ -119,13 +123,13 @@
 			      	<?PHP echo $row['nombreDirector']; ?>
 
 			      </td>
+				  <td>
+			      	  <?PHP echo $row['fechaNacimiento']; ?>
+			      </td>
 			      <td>
 			      	<?PHP echo $row['pais']; ?>
 			      </td>
-			      <td>
-			      	  <?PHP echo $row['fechaNacimiento']; ?>
-			      </td>
-					 
+			      					 
 			      <td align="center">
 					<a href="editarDirectores.php?id=<?php echo $row['idDirector'];?>">
 			      	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">

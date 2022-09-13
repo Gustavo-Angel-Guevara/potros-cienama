@@ -10,7 +10,7 @@
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" charset="utf-8"></script>
 	<style>
 		a{
-			color: white;
+			color: black;
 		}
 	</style>
 </head>
@@ -59,21 +59,28 @@
     </header>
 
 <body>
+<?php  
+    //echo"<script>alert('".$_SESSION['usuario']."');</script>";
+    include("seguridad.php");
+      if(isset($_POST['close'])){
+            include("cerrarSesion.php");
+    }  
+  ?>
 	<div class="miniespacio">
 		<br><br><br><br>
 	</div>
 	<div class="container">
-		<h2 class="letraBlanca" style="text-shadow: 5px 5px 5px black;">
-			<center>PELICULAS DISPONIBLES</center>
-			<h2>
+		<h2 class="letraBlanca" style="text-shadow: 3px 3px 3px black;">
+			<center>Peliculas Disponibles</center>
+			</h2>
 			<br>
 			<center>
-			<a href="nuevaPelicula.php" class="btn btn--1">+Agregar</a>
-			<a href="reportePeliculas.php" class="btn btn--2">Generar reporte</a>
-			<a href="respaldoGeneral.php" class="btn btn--3">Respaldo general</a>
-	</center>
-		</h2>
-		</h2>
+			<a href="index.php" class="btn btn--1">Volver</a>
+			<a href="nuevaPelicula.php" class="btn btn--2">+Agregar</a>
+			<a href="reportePeliculas.php" class="btn btn--3">Generar reporte</a>
+			<a href="respaldoGeneral.php" class="btn btn--4">Respaldo general</a>
+			</center>
+		
 		<br>
 		<?PHP 
 			//variable que conecta con mysql
@@ -91,16 +98,17 @@
 				mkdir($dir);
 		?>
 			
-		<table class="table table-dark table-striped table-hover" style="font-family: sans-serif; text-shadow: 2px 2px 2px black;">
+		<table class="table table-light table-striped table-striped table-hover" style="font-family: sans-serif;">
 		  <thead>
 		    <tr>
-		      <th scope="col">#</th>
-		      <th scope="col">Nombre pelicula</th>
-		      <th scope="col">Nacionalidad</th>
-		      <th scope="col">Detalle</th>
-		      <th scope="col">Editar</th>
-			  <th scope="col">Inhabilitar</th>
-			  <th scope="col">Borrado físico</th>
+			<tr align="center">
+		      <th class="bg-primary text-white" scope="col">#</th>
+		      <th class="bg-secondary text-white" scope="col">Nombre Pelicula</th>
+		      <th class="bg-success text-white" scope="col">Nacionalidad</th>
+		      <th class="bg-danger text-white" scope="col">Detalle</th>
+		      <th class="bg-warning text-white" scope="col">Editar</th>
+			  <th class="bg-info text-white" scope="col">Inhabilitar</th>
+			  <th class="bg-dark text-white" scope="col">Borrado físico</th>
 		    </tr>
 		  </thead>
 		  <tbody>

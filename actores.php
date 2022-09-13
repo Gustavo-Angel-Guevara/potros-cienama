@@ -70,27 +70,19 @@
 		<br><br><br><br>
 	</div>
 	<div class="container">
-		<h2 class="letraNegra">
+		<h2 class="letraBlanca" style="text-shadow: 3px 3px 3px black;">
+			<center>Lista de Actores</center>
+			</h2>
+           	<br>
+			<br>
 			<center>
-			<div class="cuadrado">Lista de Actores</div>
-           <style> .cuadrado{
-           padding:5px;
-           margin:5px;
-           background-color: #a62424;
-           box-shadow: 0px 0px 60px red;
-           color: white; }
-            </style>
-			<br>
-			<br>
 			<a href="index.php" class="btn btn--1">Volver</a> 
-			<a href="nuevoActor.php" class="btn btn--2">+Agregar P</a>
+			<a href="nuevoActor.php" class="btn btn--2">Agregar</a>
 			<a href="" class="btn btn--3">Generar reporte</a>
 			<a href="" class="btn btn--4">Respaldo general</a>
 			<a href="actoresInabilitados.php" class="btn btn--4">Deshabilitados</a>
-			<br>
-			<br>
 			</center>
-		</h2>
+		
 		
 		<?PHP 
 			//variable que conecta con mysql

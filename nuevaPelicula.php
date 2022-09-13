@@ -14,16 +14,10 @@
 		<br><br><br><br>
 	</div>
 	<div class="container">
-		<h2 class="letraNegra">
+		<h2 class="letraBlanca">
 			<center>
 			<div class="cuadrado">Agregar nueva pelicula</div>
-           <style> .cuadrado{
-           padding:5px;
-           margin:5px;
-           background-color: #a62424;
-           box-shadow: 0px 0px 60px red;
-           color: white; }
-           </style>
+           
 		      	<br>
 
 		<form data-form='true' action="guardarPelicula.php" method="POST" data-redirigirURL="peliculas.php">

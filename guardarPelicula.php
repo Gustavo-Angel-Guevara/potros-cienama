@@ -36,7 +36,7 @@
 		}else{
 			$res = [
 				"err" => true,
-				"message" => "Error al guardar los datos intente más tarde"
+				"message" => "Error al guardar los datos, intente más tarde"
 			];
 		} 
 

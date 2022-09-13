@@ -12,7 +12,7 @@
 <div id="general" align="center">
 
 	<div class="container centrado" align="center">
-		<h2 class="letraBlanca">Agregar nuevos Directores</h2>
+		<h2 class="letraBlanca">Agregar nuevo Director</h2>
 
 		<form data-form='true' action="guardarDirector.php" method="POST" data-redirigirURL="directores.php">
 			<div class="row">
@@ -28,6 +28,7 @@
 				<div class="col-lg-12">
 					<br>
 				</div>
+
 				<div class="col-lg-4">
 					<input data-validation='required' class="form-control" type="date" name="fecha">		
 				</div>
@@ -49,13 +50,13 @@
 				</div>
 
 				<div class="col-lg-2">
-					<input type="submit" class="btn btn-primary" value="Guardar" >
+					<input type="submit" class="btn btn--1" value="Guardar" >
 					<input id="band" class="d-none" name="band" type="text" value="0"><!--IMPORTANT-->
 				</div>
 
-
 			</div>
 		</div>	
+		<a href="directores.php" class="btn btn--4">Volver</a>
 	</form>
 
 		<!--Animación de cargando para confirmación de nuevo registro-->
