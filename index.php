@@ -7,7 +7,7 @@
         <link href="style.css" rel="stylesheet" >
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" charset="utf-8"></script>
     </head>
-    <h2 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 50px; color: white; text-shadow: 5px 5px 5px black; width:100wv; text-align:center">Bienvenido a cinema CUH</h2>
+    <h2 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 50px; color: #bf5cff; text-shadow: 5px 5px 5px black; width:100wv; text-align:center">Bienvenido a Potros Cinema</h2>
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center align-items-center flex-column a">
@@ -57,7 +57,7 @@
         <div class = " seccioncinema mt-3">
             <div class="box">
                 <div class="hover">
-                        <h1>Cinema UPP</h1>
+                        <h1>Potros Cinema</h1>
                 </div>
             </div>
           

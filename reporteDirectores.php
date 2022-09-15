@@ -27,7 +27,7 @@
 
 					$pdf->SetFont('Times','',14);
 					$pdf->SetXY(0,26);
-					$pdf->Cell(100,10,'Nombre director ',0,1,'C');
+					$pdf->Cell(100,10,'Nombre del director ',0,1,'C');
 
 					$pdf->SetFont('Times','I',14);
 					$pdf->SetXY(0,36);
@@ -49,6 +49,9 @@
 					$pdf->SetXY(0,36);
 					$pdf->Cell(100,90,utf8_decode($row['pais']),0,1,'C');
 
+					$pdf->SetFont('Times','',10);
+					$pdf->SetXY(22,109);
+					$pdf->Cell(60,20,'Derechos reservados',0,1,'C');
 				}
 
 			$pdf->Output();

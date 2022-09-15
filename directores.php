@@ -70,7 +70,13 @@
 	</div>
 	<div class="container">
 		<h2 class="letraBlanca" style="text-shadow: 3px 3px 3px black;">
-			<center>Lista de directores</center>
+		<style> .letraBlanca{
+			font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+			font-size: 60px;
+			color: white;  
+		 }
+           </style>	
+		<center>Lista de directores</center>
 		</h2>	
 			<br></br>
 			<center>

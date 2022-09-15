@@ -70,22 +70,21 @@
 		<br><br><br><br>
 	</div>
 	<div class="container">
-		<h2 class="letraNegra">
-			<center>
-			<div class="cuadrado">Lista de Actores</div>
-           <style> .cuadrado{
-           padding:5px;
-           margin:5px;
-           background-color: #a62424;
-           box-shadow: 0px 0px 60px red;
-           color: white; }
-            </style>
+		<h2><center>
+		   <div class="letraBlanca" style="text-shadow: 3px 3px 3px black;">Lista de Actores</div>
+           <style> .letraBlanca{
+			font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+			font-size: 60px;
+			color: white;  
+		 }
+           </style>	
 			<br>
 			<br>
 			<a href="index.php" class="btn btn--1">Volver</a> 
-			<a href="nuevoActor.php" class="btn btn--2">+Agregar P</a>
-			<a href="" class="btn btn--3">Generar reporte</a>
-			<a href="" class="btn btn--4">Respaldo general</a>
+			<a href="nuevoActor.php" class="btn btn--2">+Agregar</a>
+			<a href="ReporteActores" class="btn btn--3">Generar reporte</a>
+			<a href="respaldoGenerak" class="btn btn--4">Respaldo general</a>
+			<a href="actores.php" class="btn btn--5">Habilitados</a>
 			<br>
 			<br>
 			</center>

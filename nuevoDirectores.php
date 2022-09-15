@@ -6,14 +6,16 @@
 	<!-- CSS only -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/spinkit.css"><!--IMPORTANT-->
-	<link rel="stylesheet" type="text/css" href="css/estiloCine1.css">
+	<link rel="stylesheet" type="text/css" href="css/estiloDirectores.css">
 </head>
 <body>
 <div id="general" align="center">
 
 	<div class="container centrado" align="center">
-		<h2 class="letraBlanca">Agregar nuevo Director</h2>
-
+		<h2 class="letraBlanca"><center>Agregar nuevo Director</center> </h2>
+		<style> .letraBlanca{       
+           color: #48e0ab; font-size:40px}
+           </style>
 		<form data-form='true' action="guardarDirector.php" method="POST" data-redirigirURL="directores.php">
 			<div class="row">
 
@@ -50,13 +52,14 @@
 				</div>
 
 				<div class="col-lg-2">
-					<input type="submit" class="btn btn--1" value="Guardar" >
+					<input type="submit" class="btn btn--2" value="Guardar" >
 					<input id="band" class="d-none" name="band" type="text" value="0"><!--IMPORTANT-->
+					<a href="directores.php" class="btn btn--1">Volver</a>
 				</div>
 
 			</div>
 		</div>	
-		<a href="directores.php" class="btn btn--4">Volver</a>
+		
 	</form>
 
 		<!--Animación de cargando para confirmación de nuevo registro-->

@@ -23,7 +23,7 @@
 
 					$pdf->SetFont('Times','B',20);
 					$pdf->SetXY(8,5);
-					$pdf->Cell(90,30,'Actores del cine',0,1,'C');
+					$pdf->Cell(90,30,'Lista de Actores',0,1,'C');
 
 					$pdf->SetFont('Times','',14);
 					$pdf->SetXY(0,26);
@@ -34,10 +34,10 @@
 					$pdf->Cell(100,20,utf8_decode($row['nombre']),0,1,'C');
 
 					$rutaImagen = 'C:/xampp/htdocs/cine/temp/pelicula_'.$row['idActor'].'.png';
-					$pdf->Image($rutaImagen,22,50,60,60);
+					//$pdf->Image($rutaImagen,22,50,60,60);
 
 					$pdf->SetFont('Times','',10);
-					$pdf->SetXY(22,104);
+					$pdf->SetXY(22,109);
 					$pdf->Cell(60,20,'Derechos reservados',0,1,'C');
 
 				}

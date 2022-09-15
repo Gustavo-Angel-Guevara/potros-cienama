@@ -71,6 +71,12 @@
 	</div>
 	<div class="container">
 		<h2 class="letraBlanca" style="text-shadow: 3px 3px 3px black;">
+		 <style> .letraBlanca{
+			font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+			font-size: 60px;
+			color: white;  
+		 }
+           </style>
 			<center>Lista de Actores</center>
 			</h2>
            	<br>
@@ -78,9 +84,9 @@
 			<center>
 			<a href="index.php" class="btn btn--1">Volver</a> 
 			<a href="nuevoActor.php" class="btn btn--2">Agregar</a>
-			<a href="" class="btn btn--3">Generar reporte</a>
-			<a href="" class="btn btn--4">Respaldo general</a>
-			<a href="actoresInabilitados.php" class="btn btn--4">Deshabilitados</a>
+			<a href="ReporteActores.php" class="btn btn--3">Generar reporte</a>
+			<a href="respaldoGeneral.php" class="btn btn--4">Respaldo general</a>
+			<a href="actoresInabilitados.php" class="btn btn--5">Deshabilitados</a>
 			</center>
 		
 		

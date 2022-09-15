@@ -24,11 +24,11 @@
 
 					$pdf->SetFont('Times','B',20);
 					$pdf->SetXY(8,5);
-					$pdf->Cell(90,30,'Peliculas CINE CUH',0,1,'C');
+					$pdf->Cell(90,30,'Peliculas Potro Cinema',0,1,'C');
 
 					$pdf->SetFont('Times','',14);
 					$pdf->SetXY(0,26);
-					$pdf->Cell(100,20,'Nombre pelicula: ',0,1,'C');
+					$pdf->Cell(100,20,'Nombre de la pelicula: ',0,1,'C');
 
 					$pdf->SetFont('Times','I',14);
 					$pdf->SetXY(0,36);
@@ -38,7 +38,7 @@
 					$pdf->Image($rutaImagen,22,50,60,60);
 
 					$pdf->SetFont('Times','',10);
-					$pdf->SetXY(22,104);
+					$pdf->SetXY(22,109);
 					$pdf->Cell(60,20,'Derechos reservados',0,1,'C');
 
 				}

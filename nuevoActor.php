@@ -19,12 +19,8 @@
     <div class="container">
           <hr>
         <div class="cuadrado"><h1><center>Agregar Nuevo Actor</center> </h1></div>
-           <style> .cuadrado{
-           padding:5px;
-           margin:5px;
-           background-color: #a62424;
-           box-shadow: 0px 0px 60px red;
-           color: white; }
+           <style> .cuadrado{       
+           color: #48e0ab; font-size:40px}
            </style>
 		      	<br>
           
@@ -277,16 +273,16 @@
             </select>
             <br><br>
             
-            <span style="color: red !important; display: inline; float: none;"><h3>*</h3></span>
+            <span style="color: red !important; display: inline; float: none;"><center><h3>*</span>
             
-          </span><center> <label style="color:white"><h3>Campos Obligatorio</h3></label></center></h3>
+          </span> <label style="color:white; font-size: 20px;">Campos Obligatorio</label></center></h3>
             <br><br>
             <center>
-            <button type="button" data-bs-toggle="modal" data-bs-target="#modalNuevoActor"href='guardarActor.php'><h3>Guardar</h3> </button>
+            <button class="btn btn--2" type="button" data-bs-toggle="modal" data-bs-target="#modalNuevoActor"href='guardarActor.php'><h3>Guardar</h3> </button>
             <input id="band" class="d-none" name="band" type="text" value="0">
             <br>
             <br>
-            <button onclick="location.href='actores.php'" type="button"><h3>Regresar</h3> </button>
+            <button class="btn btn--1" onclick="location.href='actores.php'" type="button"><h3>Regresar</h3> </button>
             </center>
             <div class="modal fade" id="modalNuevoActor" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -298,8 +294,8 @@
                       <h2>Se creará un nuevo registro de actor en la base de datos.</h2> 
                     </div>
                     <div class="modal-footer">
-                    <button type="submit" class="btn btn-success btn-outline-success btn-lg" data-bs-dismiss="modal">Entendido</button>
-                    <button type="button" class="btn btn-danger btn-outline-danger btn-lg" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn--2" data-bs-dismiss="modal">Entendido</button>
+                    <button type="button" class="btn btn--1" data-bs-dismiss="modal">Cancelar</button>
 
 
 

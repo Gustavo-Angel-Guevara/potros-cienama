@@ -25,12 +25,8 @@
 		<div class="container">
           <hr>
         <div class="cuadrado"><h1><center>Editar pelicula: <?php echo $row['nombrePelicula'];?></center> </h1></div>
-           <style> .cuadrado{
-           padding:5px;
-           margin:5px;
-           background-color: #a62424;
-           box-shadow: 0px 0px 60px red;
-           color: white; }
+           <style> .cuadrado{       
+           color: yellow; font-size:60px}
            </style>
 		      	<br>
 

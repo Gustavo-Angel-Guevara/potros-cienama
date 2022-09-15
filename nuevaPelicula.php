@@ -15,6 +15,9 @@
 	</div>
 	<div class="container">
 		<h2 class="letraBlanca">
+		<style> .cuadrado{       
+           color: #48e0ab; font-size:40px}
+           </style>
 			<center>
 			<div class="cuadrado">Agregar nueva pelicula</div>
            
