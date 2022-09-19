@@ -107,7 +107,7 @@
 		      <th class="bg-success text-white" scope="col">Nacionalidad</th>
 		      <th class="bg-danger text-white" scope="col">Detalle</th>
 		      <th class="bg-warning text-white" scope="col">Editar</th>
-			  <th class="bg-info text-white" scope="col">Inhabilitar</th>
+			  <th class="bg-info text-white" scope="col">Borrado Lógico</th>
 			  <th class="bg-dark text-white" scope="col">Borrado físico</th>
 		    </tr>
 		  </thead>

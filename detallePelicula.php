@@ -13,7 +13,7 @@
 <body>
 <style>
 	.letraBlanca-centrado{
-		color: red;
+	color: #48e0ab; font-size:40px;
 		text-align: center;
 	}
 	.tabletable-dark table-striped table-hover-centrado{
@@ -65,7 +65,7 @@
 		      <th scope="row">
 			  <?PHP 
 			  
-			      	echo "  ||  DETALLES GENERALES DE CADA PELICULA EN QR ESCANEABLE PARA LA PELICULA :    ".$row['idPelicula'];
+			      	echo "DETALLES GENERALES DE CADA PELICULA EN QR ESCANEABLE PARA LA PELICULA :    ".$row['idPelicula'];
 			      	$filename = $dir.'pelicula_'.$row['idPelicula'].'.png';
 					$tam = 12;
 					$level ='M';
@@ -78,9 +78,9 @@
 					echo '<img src="'.$filename.'" width="60%"/>'; 
 			      ?>
 				  <br><br>
-				  <a class="btn btn-outline-info btn-lg" href="generarBoletos.php"> 
-                <svg GB="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" width="24" height="24" fill="currentColor" class="bi bi-film" viewBox="0 0 16 16">
-                </svg>GENERAR BOLETOS PARA LA PELICULA</a>
+				  <center><a class="btn btn--3" href="generarBoletos.php"> 
+                <svg GB="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" width="0" height="24" fill="currentColor" class="bi bi-film" viewBox="0 0 16 16">
+                </svg>GENERAR BOLETO</a></center>
 			  </th>
 		    </tr>
 		  </thead>

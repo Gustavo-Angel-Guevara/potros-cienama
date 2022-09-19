@@ -26,7 +26,7 @@
           <hr>
         <div class="cuadrado"><h1><center>Editar pelicula: <?php echo $row['nombrePelicula'];?></center> </h1></div>
            <style> .cuadrado{       
-           color: yellow; font-size:60px}
+           color: #48e0ab; font-size:40px}
            </style>
 		      	<br>
 
@@ -86,10 +86,10 @@
 				<div class="col-lg-5">
 					<input type="hidden" name="idP" value="<?php echo $row['idPelicula'];?>">
 					<input id="band" class="d-none" name="band" type="text" value="0"><!--IMPORTANT-->
-					<input type="submit" class="btn btn--5" value="Actualizar">
+					<input type="submit" class="btn btn--3" value="Actualizar">
 
 				</div>
-<br><br>
+				<br><br>
 
 			</div>
 			

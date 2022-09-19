@@ -54,14 +54,15 @@
 					<!--Data-warn sirve como referencia para insertar un mensaje al validar los campos-->
 					
 				</div>
-
+				<center>
 				<div class="col-lg-3">
 
 					<input type="hidden" name="idD" value="<?php echo $row['idDirector'];?>">
 					<input id="band" class="d-none" name="band" type="text" value="0"><!--IMPORTANT-->
-					<input type="submit" class="btn btn-warning" value="Actualizar">
+					<input type="submit" class="btn btn--3" value="Actualizar">
+					<a href="directores.php" class="btn btn--1">Volver</a>
 				</div>
-
+				</center>
 
 			</div>
 			

@@ -5,12 +5,12 @@
 	<title>generar Boletos</title>
 	<!-- CSS only -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/estiloCine1.css">
+	<link rel="stylesheet" type="text/css" href="css/estiloACtores.css">
   </head>
 <body>
 <style>
 	.letraBlanca-centrado{
-		color: white;
+		color: #48e0ab; font-size:40px;
 		text-align: center;
 	}
 	.body{
@@ -18,16 +18,12 @@
 	}
 
 </style>
-<a href="peliculas.php" class="btn btn-outline-info btn-lg">CANCELAR</a>
+<a href="peliculas.php" class="btn btn-outline-info btn-lg">Volver</a>
 	<div class="container centrado">
 			<h2 class="cuadrado">¿DE CUAL DE LAS PELICULAS QUIERES GENERAR BOLETOS?</div>
       <style> .cuadrado{
-       text-align: center;
-       padding:7px;
-       margin:7px;
-       background-color: #a62424;
-       box-shadow: 0px 0px 60px red;
-       color: white; }
+      color: #48e0ab; font-size:40px;
+		text-align: center;
        </style>
 				
 <?PHP
@@ -62,7 +58,7 @@ $resultado = $conexion->query($consulta);
        margin:5px;
   
        color: white; }
-       </style> <a class="btn btn-outline-info btn-lg" GB="generarBoletos.php"> 
+       </style> <a class="btn btn-outline-info btn--3" GB="generarBoletos.php"> 
                 <svg xmlns="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" width="24" height="24" fill="currentColor" class="bi bi-film" viewBox="0 0 16 16">
                 </svg>GENERAR BOLETOS</a> <?PHP 
 			     
@@ -75,7 +71,7 @@ $resultado = $conexion->query($consulta);
  
 					echo '<img src="'.$filename.'" width="15%"/>'; 
 			      ?>
-				  <br>
+				  <br><br><br>
 				  
 			  </th>
 		    </tr>
@@ -96,11 +92,6 @@ $resultado = $conexion->query($consulta);
 			      </td>
 			    </tr>
 
-
-
-			  
-
-			 
 
 			    <?PHP
 			}
